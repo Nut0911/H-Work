@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8faff;
+    /* สีฟ้าอ่อนๆ ตามรูป */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: transparent;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* สีขาวโปร่งแสงนิดๆ */
+    backdrop-filter: blur(10px);
+    /* ทำเอฟเฟกต์กระจกฝ้า (Glassmorphism) */
+    position: sticky;
+    /* ให้ Navbar ติดอยู่ที่ด้านบนเวลา Scroll */
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    /* เส้นขอบบางๆ ด้านล่าง */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    /* เงาจางๆ ให้ดูมีมิติ */
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navbar nav a.active {
+    color: #2563eb;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+.btn-login-nav {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Auth Card */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.auth-card {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.auth-card h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Toggle Switch */
+.toggle-container {
+    display: flex;
+    background: #f1f5f9;
+    padding: 5px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.toggle-btn {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    background: transparent;
+    color: #64748b;
+    transition: all 0.3s ease;
+    /* เพิ่มความสมูทเวลาสลับสี */
+}
+
+.toggle-btn.active {
+    background-color: #ffffff;
+    /* เปลี่ยนพื้นหลังเป็นสีขาว */
+    color: #2563eb;
+    /* เปลี่ยนฟอนต์เป็นสีฟ้า */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงาจางๆ ให้ดูป๊อปออกมา */
+}
+
+/* Forms */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    background: #e2e8f0;
+    /* สีพื้นหลังช่อง input ตามรูป */
+    outline: none;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+
+.btn-signup {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+/* Divider */
+.divider {
+    margin: 25px 0;
+    position: relative;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.divider span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 0 10px;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+/* Social Login */
+.social-login {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background: #e2e8f0;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.social-btn img {
+    width: 18px;
+}
+
+/* --- เอฟเฟกต์ Hover สำหรับปุ่มต่างๆ --- */
+
+/* ปุ่ม Login (Navbar) และปุ่ม Sign Up หลัก */
+.btn-login-nav,
+.btn-signup {
+    transition: all 0.3s ease;
+}
+
+.btn-login-nav:hover,
+.btn-signup:hover {
+    background-color: #1d4ed8;
+    /* สีเข้มขึ้นนิดนึง */
+    transform: translateY(-1px);
+    /* ลอยขึ้นเล็กน้อย */
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
+}
+
+.btn-login-nav:active,
+.btn-signup:active {
+    transform: translateY(0);
+    /* กดลงไป */
+}
+
+/* ปุ่ม Social Login (Google, Github) */
+.social-btn {
+    transition: all 0.2s ease;
+}
+
+.social-btn:hover {
+    background-color: #cbd5e1;
+    /* เทาเข้มขึ้นนิดนึง */
+    border-color: #94a3b8;
+}
+
+/* ปุ่ม Toggle (Developer / Hiring Company) */
+.toggle-btn:not(.active):hover {
+    color: #1e293b;
+}
+
