@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-
 <body>
 
     <header class="navbar">
-        <div class="logo">H-WORK</div>
+        <div class="logo-container">
+            <img src="/picture/image.png" alt="Logo" class="main-logo">
+            <span class="logo-text">H-WORK</span>
+        </div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Job Board</a>
-            <a href="#" class="active">Sign Up</a>
+            <a href="/signup.html" class="active">Sign Up</a>
             <button class="btn-login-nav">Log In</button>
         </nav>
     </header>
@@ -28,33 +28,32 @@
             <p class="subtitle">Join the curated ecosystem for elite developers.</p>
 
             <div class="toggle-container">
-                <div class="toggle-slider"></div> <button class="toggle-btn active"
-                    onclick="moveSlider(0)">Developer</button>
+                <div class="toggle-slider"></div>
+                <button class="toggle-btn active" onclick="moveSlider(0)">Developer</button>
                 <button class="toggle-btn" onclick="moveSlider(1)">Hiring Company</button>
             </div>
 
             <form>
                 <div class="input-group">
                     <label>FULL NAME</label>
-                    <input type="text" placeholder="">
+                    <input type="text" required>
                 </div>
                 <div class="input-group">
                     <label>EMAIL ADDRESS</label>
-                    <input type="email" placeholder="">
+                    <input type="email" required>
                 </div>
                 <div class="input-group">
                     <label>PASSWORD</label>
                     <div class="password-wrapper">
-                        <input type="password">
+                        <input type="password" required>
                     </div>
                 </div>
                 <div class="input-group">
                     <label>CONFIRM PASSWORD</label>
                     <div class="password-wrapper">
-                        <input type="password">
+                        <input type="password" required>
                     </div>
                 </div>
-
                 <button type="submit" class="btn-signup">Sign Up</button>
             </form>
 
@@ -63,47 +62,23 @@
             </div>
 
             <div class="social-login">
-                <button class="social-btn"><i class="fa-brands fa-google"></i>Google</button>
-                <button class="social-btn">
-                    <i class="fa-brands fa-github"></i>
-                    Github
-                </button>
+                <button class="social-btn"><i class="fa-brands fa-google"></i> Google</button>
+                <button class="social-btn"><i class="fa-brands fa-github"></i> Github</button>
             </div>
 
             <p class="footer-link">Already have an account? <a href="#">Login</a></p>
         </div>
     </main>
+
     <script>
-        // ดึงปุ่มทั้งหมดใน toggle-container ออกมา
-        const toggleButtons = document.querySelectorAll('.toggle-btn');
-
-        toggleButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // ลบคลาส 'active' ออกจากทุกปุ่มก่อน
-                toggleButtons.forEach(btn => btn.classList.remove('active'));
-
-                // เพิ่มคลาส 'active' ให้กับปุ่มที่ถูกคลิก
-                button.classList.add('active');
-            });
-        });
-
-        // เรียกใช้ Lucide Icons (ถ้ายังไม่ได้ใส่)
-        lucide.createIcons();
-
         function moveSlider(index) {
             const slider = document.querySelector('.toggle-slider');
             const buttons = document.querySelectorAll('.toggle-btn');
 
-            // เลื่อน Slider: ถ้า index 0 อยู่ที่เดิม (0%), ถ้า index 1 เลื่อนไปขวา (100%)
             slider.style.transform = `translateX(${index * 100}%)`;
 
-            // สลับคลาส active ให้ตัวหนังสือเปลี่ยนสี
             buttons.forEach((btn, i) => {
-                if (i === index) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
+                btn.classList.toggle('active', i === index);
             });
         }
     </script>
