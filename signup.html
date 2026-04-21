@@ -28,8 +28,9 @@
             <p class="subtitle">Join the curated ecosystem for elite developers.</p>
 
             <div class="toggle-container">
-                <button class="toggle-btn active">Developer</button>
-                <button class="toggle-btn">Hiring Company</button>
+                <div class="toggle-slider"></div> <button class="toggle-btn active"
+                    onclick="moveSlider(0)">Developer</button>
+                <button class="toggle-btn" onclick="moveSlider(1)">Hiring Company</button>
             </div>
 
             <form>
@@ -88,6 +89,23 @@
 
         // เรียกใช้ Lucide Icons (ถ้ายังไม่ได้ใส่)
         lucide.createIcons();
+
+        function moveSlider(index) {
+            const slider = document.querySelector('.toggle-slider');
+            const buttons = document.querySelectorAll('.toggle-btn');
+
+            // เลื่อน Slider: ถ้า index 0 อยู่ที่เดิม (0%), ถ้า index 1 เลื่อนไปขวา (100%)
+            slider.style.transform = `translateX(${index * 100}%)`;
+
+            // สลับคลาส active ให้ตัวหนังสือเปลี่ยนสี
+            buttons.forEach((btn, i) => {
+                if (i === index) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
     </script>
 </body>
 

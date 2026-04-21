@@ -100,9 +100,13 @@ body {
 .toggle-container {
     display: flex;
     background: #f1f5f9;
-    padding: 5px;
+    padding: 4px;
+    /* เว้นระยะให้ slider นิดนึงจะดูสวย */
     border-radius: 12px;
     margin-bottom: 30px;
+    position: relative;
+    /* สำคัญ: เพื่อให้ slider เลื่อนเทียบกับตัวนี้ */
+    z-index: 1;
 }
 
 .toggle-btn {
@@ -114,18 +118,34 @@ body {
     font-weight: 600;
     cursor: pointer;
     background: transparent;
+    /* พื้นหลังปุ่มจริงให้โปร่งใส */
     color: #64748b;
-    transition: all 0.3s ease;
-    /* เพิ่มความสมูทเวลาสลับสี */
+    position: relative;
+    z-index: 3;
+    /* อยู่เหนือ slider */
+    transition: color 0.3s ease;
 }
 
+/* สไตล์ตอนที่ปุ่มถูกเลือก */
 .toggle-btn.active {
-    background-color: #ffffff;
-    /* เปลี่ยนพื้นหลังเป็นสีขาว */
     color: #2563eb;
-    /* เปลี่ยนฟอนต์เป็นสีฟ้า */
+    /* ตัวหนังสือเปลี่ยนเป็นสีฟ้า */
+}
+
+/* ตัวเลื่อนสีขาว (The Slider) */
+.toggle-slider {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    /* กว้างครึ่งหนึ่งของ container */
+    background: white;
+    border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    /* เพิ่มเงาจางๆ ให้ดูป๊อปออกมา */
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* ความสมูทของการเลื่อน */
 }
 
 /* Forms */
@@ -254,4 +274,3 @@ body {
 .toggle-btn:not(.active):hover {
     color: #1e293b;
 }
-
