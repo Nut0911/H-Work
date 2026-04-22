@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-WORK Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <header class="logo-section">
+            <h1>H - WORK</h1>
+            <p>THE CURATED ARCHITECT</p>
+        </header>
+
+        <div class="login-card">
+            <h2>Welcome Back</h2>
+            <p class="subtitle">Please enter your details to sign in.</p>
+
+            <form>
+                <div class="input-group">
+                    <label>EMAIL ADDRESS</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="email@example.com" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="label-row">
+                        <label>PASSWORD</label>
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                    </div>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                        <i class="fa-regular fa-eye" id="togglePassword"></i>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-login">Log In</button>
+
+                <div class="divider">
+                    <span>OR CONTINUE WITH</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="btn-social">
+                        <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" alt="Google"> Google
+                    </button>
+                    <button type="button" class="btn-social">
+                        <i class="fa-brands fa-github"></i> Github
+                    </button>
+                </div>
+
+                <p class="signup-text">Don't have an account? <a href="#">Sign in</a></p>
+            </form>
+        </div>
+
+        <footer class="features">
+            <span><i class="fa-solid fa-code"></i> VERIFIED CODE</span>
+            <span><i class="fa-solid fa-compass-drafting"></i> EXPERT CURATION</span>
+            <span><i class="fa-solid fa-shield-halved"></i> SECURE AUTH</span>
+        </footer>
+
+        <div class="bottom-footer">
+            <p>© 2024 H-WORK. BUILT FOR THE CURATED ARCHITECT.</p>
+            <div class="footer-links">
+                <a href="#">DOCUMENTATION</a>
+                <a href="#">PRIVACY</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
