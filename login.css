@@ -1,3 +1,70 @@
+.navbar {
+    background-color: white;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    position: fixed; /* ໃຫ້ຕິດຢູ່ເທິງຕະຫຼອດ */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin-left: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #2563eb;
+}
+
+/* ປຸ່ມ Login ແບບເດັ່ນໆ */
+.nav-btn-primary {
+    background-color: #2563eb;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+.nav-btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+/* ປັບແຕ່ງ Body ເພາະ Navbar ບັງ */
+body {
+    padding-top: 100px; /* ຍັບເນື້ອຫາລົງມາເພື່ອບໍ່ໃຫ້ Navbar ບັງ */
+}
 * {
     margin: 0;
     padding: 0;
