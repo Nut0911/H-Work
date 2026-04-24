@@ -13,7 +13,7 @@
 
     <header class="navbar">
         <div class="logo-container">
-            <img src="/picture/Logo.png" alt="Logo" class="main-logo">
+            <a href="/home.html"><img src="/picture/Logo.png" alt="Logo" class="main-logo"></a>
             <span class="logo-text">H-WORK</span>
         </div>
         <nav>
@@ -26,12 +26,6 @@
         <div class="auth-card">
             <h1>Create an Account</h1>
             <p class="subtitle">Join the curated ecosystem for elite developers.</p>
-
-            <div class="toggle-container">
-                <div class="toggle-slider"></div>
-                <button class="toggle-btn active" onclick="moveSlider(0)">Developer</button>
-                <button class="toggle-btn" onclick="moveSlider(1)">Hiring Company</button>
-            </div>
 
             <form>
                 <div class="input-group">
@@ -54,7 +48,7 @@
                         <input type="password" required>
                     </div>
                 </div>
-                <button type="submit" class="btn-signup">Sign Up</button>
+                <a href="/home.html"><button type="button" class="btn-signup">Sign Up</button></a>
             </form>
 
             <div class="divider">
@@ -70,18 +64,6 @@
         </div>
     </main>
 
-    <script>
-        function moveSlider(index) {
-            const slider = document.querySelector('.toggle-slider');
-            const buttons = document.querySelectorAll('.toggle-btn');
-
-            slider.style.transform = `translateX(${index * 100}%)`;
-
-            buttons.forEach((btn, i) => {
-                btn.classList.toggle('active', i === index);
-            });
-        }
-    </script>
 </body>
 
 </html>

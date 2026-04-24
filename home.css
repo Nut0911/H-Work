@@ -1,0 +1,587 @@
+/* --- A. Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
+    /* แนะนำ Inter font */
+}
+
+body {
+    background-color: #f7f9fc;
+    color: #1a202c;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease-in-out;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- B. Utility: Buttons --- */
+.btn {
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.btn:active {
+    transform: scale(0.98);
+    /* กดแล้วยุบเล็กน้อย */
+}
+
+.btn-primary {
+    background-color: #0056d2;
+    /* สีน้ำเงินหลัก */
+    color: white;
+}
+
+/* ⚠️ **Hover Effect ของปุ่ม Primary** */
+.btn-primary:hover {
+    background-color: #003a8c;
+    /* เข้มขึ้นเมื่อ hover */
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.15);
+    /* กึ่งโปร่งใสบน banner */
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ⚠️ **Hover Effect ของปุ่ม Secondary** */
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #a0aec0;
+    transition: color 0.2s ease-in-out;
+}
+
+/* ⚠️ **Hover Effect ของปุ่มไอคอน** */
+.icon-btn:hover {
+    color: #4a5568;
+}
+
+/* --- C. HEADER (Fixed) --- */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    /* ปรับค่านี้เพื่อเลื่อนเมนูให้ใกล้หรือไกลจากโลโก้ */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.main-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.main-logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-text {
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: -0.5px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #718096;
+}
+
+.main-nav a.active {
+    color: #1a202c;
+    font-weight: 700;
+}
+
+/* ⚠️ **Hover ของลิงก์ Nav** */
+.main-nav a:not(.active):hover {
+    color: #1a202c;
+}
+
+.header-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.post-job-btn {
+    font-size: 12px;
+    padding: 8px 18px;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #e2e8f0;
+    border-radius: 50%;
+}
+
+/* --- D. MAIN CONTENT & HERO --- */
+.main-content {
+    padding-top: 90px;
+    /* ⚠️ เว้นระยะจาก Header */
+}
+
+.hero-image-wrapper {
+    position: relative;
+    flex: 0.8;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image-wrapper img {
+    max-width: 450px;
+    border-radius: 20px;
+    display: block;
+}
+
+/* สร้างชั้นสีฟ้าเบลอคลุมรูป */
+.blue-blur-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(200, 225, 255, 0.2) 0%, rgba(0, 86, 210, 0.3) 100%);
+    backdrop-filter: blur(10px);
+    /* ทำให้รูปด้านหลังเบลอ */
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.hero-section {
+    padding: 100px 0 30px 0;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #e2e8f0;
+    color: #4a5568;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+    color: #0056d2;
+    /* Dream Dev Job blue */
+}
+
+.hero-text p {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 10px;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    color: #a0aec0;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 10px 10px 45px;
+    font-size: 14px;
+}
+
+.search-btn {
+    padding: 12px 20px;
+    font-size: 12px;
+}
+
+.hero-image img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- E. EXPLORE DOMAINS (Scrollable) --- */
+.domains-section {
+    padding: 40px 0;
+}
+
+.domains-section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.domains-section>p {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 25px;
+}
+
+/* ⚠️ **ส่วนที่ทำให้เลื่อนได้** */
+.domains-scroll-wrapper {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    /* ทำให้เลื่อนแนวนอน */
+    padding: 10px 0 20px 0;
+    /* ซ่อน scrollbar ในบาง browser */
+    -webkit-overflow-scrolling: touch;
+    /* เลื่อนลื่นบน iOS */
+}
+
+/* ซ่อน scrollbar ของ wrapper (Chrome/Safari) */
+.domains-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.domain-card {
+    flex: 0 0 calc(20% - 12px);
+    /* การ์ด 5 อันต่อหน้าจอ กว้างเท่ากัน */
+    min-width: 180px;
+    /* ขนาดขั้นต่ำต่อการ์ด */
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.domain-card i {
+    font-size: 20px;
+    color: #0056d2;
+    margin-bottom: 15px;
+}
+
+.domain-card h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.domain-card p {
+    font-size: 12px;
+    color: #718096;
+}
+
+/* ⚠️ **Active State ของการ์ด** */
+.domain-card.active {
+    background-color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* ⚠️ **Hover ของการ์ด** */
+.domain-card:not(.active):hover {
+    border-color: #0056d2;
+    transform: translateY(-2px);
+    /* ยกตัวขึ้นเล็กน้อย */
+}
+
+/* --- F. OPPORTUNITIES --- */
+.opportunities-section {
+    padding: 40px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.view-all {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0056d2;
+}
+
+/* ⚠️ **Hover ของ view-all** */
+.view-all:hover {
+    color: #003a8c;
+}
+
+.job-card {
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 15px;
+    transition: border-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* ⚠️ **Hover ของ Job Card** */
+.job-card:hover {
+    border-color: #0056d2;
+}
+
+.job-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.job-details {
+    flex: 1;
+}
+
+.job-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 8px;
+    font-weight: 700;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.job-badge.new {
+    background-color: #e2e8f0;
+    color: #4a5568;
+}
+
+.job-details h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.company-info {
+    font-size: 12px;
+    color: #718096;
+    margin-bottom: 10px;
+}
+
+.job-desc {
+    font-size: 12px;
+    color: #718096;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tags span {
+    font-size: 10px;
+    font-weight: 600;
+    color: #4a5568;
+    background-color: #e2e8f0;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.job-salary {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* --- G. BUILD BANNER --- */
+.build-banner {
+    padding: 60px 0;
+}
+
+.banner-content {
+    background: linear-gradient(135deg, #021a36 0%, #000c1d 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 60px;
+    text-align: center;
+}
+
+.banner-content h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.banner-content p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.banner-btn {
+    padding: 12px 30px;
+    font-size: 12px;
+}
+
+/* --- H. FOOTER --- */
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.logo-small {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.footer-left p {
+    font-size: 10px;
+    color: #a0aec0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    font-size: 10px;
+    font-weight: 700;
+    color: #a0aec0;
+}
+
+/* ⚠️ **Hover ของลิงก์ Footer** */
+.footer-links a:hover {
+    color: #4a5568;
+}
+
+/* --- I. Responsive Styles (Basic) --- */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+
+    .search-bar {
+        margin: 0 auto;
+    }
+
+    .domain-card {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .job-card {
+        flex-direction: column;
+        gap: 15px;
+        text-align: left;
+    }
+
+    .job-salary {
+        text-align: left;
+        margin-top: 10px;
+    }
+}

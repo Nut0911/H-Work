@@ -180,38 +180,6 @@ body {
     position: relative;
 }
 
-.toggle-btn {
-    flex: 1;
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    background: transparent;
-    color: #64748b;
-    position: relative;
-    z-index: 2;
-    transition: 0.3s;
-}
-
-.toggle-btn.active {
-    color: #2563eb;
-}
-
-.toggle-slider {
-    position: absolute;
-    top: 4px;
-    bottom: 4px;
-    left: 4px;
-    width: calc(50% - 4px);
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 /* --- Inputs --- */
 .input-group {
     text-align: left;
