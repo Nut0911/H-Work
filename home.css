@@ -359,14 +359,8 @@ ul {
     color: #718096;
 }
 
-/* ⚠️ **Active State ของการ์ด** */
-.domain-card.active {
-    background-color: white;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
-}
-
 /* ⚠️ **Hover ของการ์ด** */
-.domain-card:not(.active):hover {
+.domain-card:hover {
     border-color: #0056d2;
     transform: translateY(-2px);
     /* ยกตัวขึ้นเล็กน้อย */
