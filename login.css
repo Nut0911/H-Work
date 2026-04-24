@@ -183,7 +183,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
-    transition: background 0.3s;
+    transition: background-color  0.3s;
 }
 
 .btn-login:hover {

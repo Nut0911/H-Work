@@ -1,0 +1,47 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+body { background-color: #f8faff; color: #333; padding-bottom: 50px; }
+
+/* Header & Navigation */
+.navbar { background: white; height: 65px; border-bottom: 1px solid #eee; display: flex; justify-content: center; position: sticky; top: 0; z-index: 100; }
+.nav-container { width: 100%; max-width: 1100px; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+.nav-menu { display: flex; list-style: none; gap: 20px; }
+.nav-menu a { text-decoration: none; color: #888; font-size: 13px; font-weight: 600; }
+.nav-menu a.active { color: #2563eb; }
+.nav-btn-primary { background: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; }
+
+/* Main Content */
+.main-content { max-width: 700px; margin: 60px auto; padding: 0 20px; }
+.badge { background: #eef2ff; color: #2563eb; font-size: 10px; font-weight: 700; padding: 4px 8px; border-radius: 4px; }
+h1 { font-size: 36px; margin: 15px 0; line-height: 1.1; }
+.highlight { color: #2563eb; }
+
+/* Role Selector */
+.role-selector { background: #e9ecef; display: inline-flex; padding: 4px; border-radius: 30px; margin: 20px 0; }
+.role-btn { border: none; padding: 8px 24px; border-radius: 20px; cursor: pointer; font-weight: 600; background: transparent; color: #666; }
+.role-btn.active { background: white; color: #2563eb; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+/* Form Card */
+.form-card { background: white; padding: 35px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); margin-bottom: 20px; }
+.input-group { margin-bottom: 20px; }
+label { display: block; font-size: 11px; font-weight: 700; margin-bottom: 8px; color: #444; }
+input, select, textarea { width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 8px; background: #f9fafb; outline: none; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+/* Editor & Skills */
+.editor-toolbar { border: 1px solid #eee; border-bottom: none; padding: 8px; border-radius: 8px 8px 0 0; background: #f9fafb; display: flex; gap: 15px; color: #999; }
+textarea { border-radius: 0 0 8px 8px; min-height: 120px; resize: vertical; }
+.skills-container { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.skill-tag { background: #dbeafe; color: #2563eb; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; }
+.add-skill-btn { border: 1px dashed #2563eb; background: transparent; color: #2563eb; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; }
+
+/* Footer */
+.form-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 30px; }
+.btn-continue { background: #2563eb; color: white; border: none; padding: 12px 40px; border-radius: 30px; font-weight: 600; cursor: pointer; }
+.btn-text { background: transparent; border: none; color: #666; cursor: pointer; font-size: 14px; }
+
+/* Tip Card */
+.tip-card { background: #ecfdf5; padding: 20px; border-radius: 12px; display: flex; gap: 15px; align-items: center; }
+.tip-icon { background: #10b981; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.tip-content strong { display: block; font-size: 14px; }
+.tip-content p { font-size: 12px; color: #444; }
+.blue-text { color: #2563eb; font-weight: 700; }
