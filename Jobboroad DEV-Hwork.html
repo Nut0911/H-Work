@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board - H-WORK</title>
+    <link rel="stylesheet" href="Jobboroad DEV-Hwork.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">H-WORK</div>
+            <ul class="nav-menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Job Board</a></li>
+                <li><a href="#">Company</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="icon-btn">🔔</button>
+                <button class="nav-btn-primary">Post a Job</button>
+                <div class="user-avatar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="filter-group">
+                <h3>DISCIPLINE</h3>
+                <button class="filter-item active">Backend <span>✓</span></button>
+                <button class="filter-item">Frontend</button>
+                <button class="filter-item">Fullstack</button>
+                <button class="filter-item">Cyber Security</button>
+            </div>
+
+            <div class="filter-group">
+                <h3>CORE STACK</h3>
+                <div class="stack-tags">
+                    <span class="tag active">Node.js</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Go</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Rust</span>
+                    <span class="tag">C++</span>
+                </div>
+            </div>
+
+            <div class="alert-box">
+                <h4>Curated Alerts</h4>
+                <p>Get the latest high-scale backend roles delivered weekly.</p>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="role-selector-main">
+                <button class="role-btn active">Developer</button>
+                <button class="role-btn">Hiring Company</button>
+            </div>
+
+            <header class="content-header">
+                <div>
+                    <h1>Backend Architecture</h1>
+                    <p>32 specialized roles found in distributed systems & API design.</p>
+                </div>
+                <button class="grid-toggle">⠿</button>
+            </header>
+
+            <div class="job-card featured">
+                <div class="job-info">
+                    <img src="https://via.placeholder.com/60" alt="logo" class="company-logo">
+                    <div>
+                        <h2>Principal Systems Architect</h2>
+                        <p>CloudScale Infrastructure • Remote, Global</p>
+                        <div class="job-tags">
+                            <span>Go</span> <span>Kubernetes</span> <span>gRPC</span> <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="job-salary">
+                    <strong>$190k – $245k</strong>
+                    <span>PLUS EQUITY</span>
+                </div>
+            </div>
+
+            <div class="job-grid">
+                <div class="job-card-small">
+                    <div class="card-header">
+                        <img src="https://via.placeholder.com/40" alt="logo">
+                        <span class="save-icon">🔖</span>
+                    </div>
+                    <h3>Staff Backend Engineer</h3>
+                    <p>Fintech Flow • New York, NY</p>
+                    <div class="job-tags"><span>NODE.JS</span> <span>TYPESCRIPT</span></div>
+                    <div class="card-footer">
+                        <strong>$160k – $210k</strong>
+                        <span>2h ago</span>
+                    </div>
+                </div>
+                <div class="job-card-small">
+                    <div class="card-header">
+                        <img src="https://via.placeholder.com/40" alt="logo">
+                        <span class="save-icon">🔖</span>
+                    </div>
+                    <h3>Data Platform Engineer</h3>
+                    <p>Insight Collective • London, UK</p>
+                    <div class="job-tags"><span>PYTHON</span> <span>APACHE SPARK</span></div>
+                    <div class="card-footer">
+                        <strong>$140k – $185k</strong>
+                        <span>5h ago</span>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="view-more">View More Backend Roles</button>
+        </main>
+    </div>
+
+    <script src="Jobboroad DEV-Hwork.js"></script>
+</body>
+</html>
