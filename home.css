@@ -148,8 +148,24 @@ ul {
 }
 
 .main-nav a.active {
-    color: #1a202c;
+    color: #0056d2;
     font-weight: 700;
+    position: relative;
+    /* เพื่อให้ขีดอ้างอิงตำแหน่งกับตัวหนังสือ */
+}
+
+.main-nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    /* ปรับระยะห่างระหว่างขีดกับตัวหนังสือ (เพิ่ม/ลดได้ตามใจชอบ) */
+    width: 100%;
+    height: 3px;
+    /* ความหนาของเส้น */
+    background-color: #0056d2;
+    border-radius: 10px;
+    /* ทำให้ปลายขีดดูมน สวยขึ้น */
 }
 
 /* ⚠️ **Hover ของลิงก์ Nav** */
@@ -229,8 +245,8 @@ ul {
 .badge {
     display: inline-block;
     padding: 6px 12px;
-    background-color: #e2e8f0;
-    color: #4a5568;
+    background-color: #7bb3fc;
+    color: #212122;
     border-radius: 20px;
     font-size: 10px;
     font-weight: 700;
@@ -412,9 +428,9 @@ ul {
 }
 
 .job-logo img {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
 }
 
 .job-details {
@@ -480,7 +496,7 @@ ul {
 }
 
 .banner-content {
-    background: linear-gradient(135deg, #021a36 0%, #000c1d 100%);
+    background: linear-gradient(135deg, #033d80 0%, #000c1d 100%);
     color: white;
     border-radius: 20px;
     padding: 60px;
