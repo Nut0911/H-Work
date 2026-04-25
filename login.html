@@ -10,18 +10,21 @@
 <body>
     <nav class="navbar">
     <div class="nav-container">
-         <div class="logo-container">
-            <img src="/picture/Logo.png" alt="Logo" class="main-logo">
-            <span class="logo-text"><h3>H-WORK</h3></span>
+        <div class="nav-left">
+            <div class="logo-wrapper">
+                <a href="#"></a><img src="/png/download.png" alt="Logo" class="main-logo"> <span class="brand-name">H-WORK</span>
+                
+            </div>
         </div>
-
         
-        <ul class="nav-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="Jobboroad DEV-Hwork.html">Job Board</a></li>
-            <li><a href="#" class="nav-btn-link">Sign Up</a></li>
-            <li><a href="login.html" class="nav-btn-primary">Log In</a></li>
-        </ul>
+        <div class="nav-right">
+            <ul class="nav-menu">
+                <li><a href="signup.html" class="nav-btn-primary">SignUP</a></li>
+                <li><p><ins><a href="login.html">login</a></ins ></p></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
         <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
@@ -61,8 +64,8 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn-login">Log In</button>
-
+                <button type="button" class="btn-login" onclick="login()">Log In</button>
+    
                 <div class="divider">
                     <span>OR CONTINUE WITH</span>
                 </div>
@@ -96,5 +99,10 @@
     </div>
 
     <script src="login.js"></script>
+             <script>
+        function login() {
+            window.location.replace('Jobs.html');
+        }
+    </script>
 </body>
 </html>

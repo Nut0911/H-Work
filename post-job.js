@@ -1,26 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const jobForm = document.getElementById('jobForm');
-    const roleButtons = document.querySelectorAll('.role-btn');
-
-    // 1. ສັລບ Developer / Hiring Company
-    roleButtons.forEach(btn => {
+    
+    // logic ສໍາລັບປ່ຽນ Toggle (Developer / Hiring Company)
+    const toggleBtns = document.querySelectorAll('.toggle-btn');
+    toggleBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            roleButtons.forEach(b => b.classList.remove('active'));
+            toggleBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
         });
     });
 
-    // 2. ຕົວຢ່າງການກົດລຶບ Skill
-    document.getElementById('skillsList').addEventListener('click', (e) => {
-        if (e.target.classList.contains('skill-tag')) {
-            e.target.remove();
+    // logic ສໍາລັບການກົດ Post (ຕົວຢ່າງການເກັບຂໍ້ມູນ)
+    const postBtn = document.querySelector('.btn-submit');
+    postBtn.addEventListener('click', () => {
+        const jobTitle = document.querySelector('input[type="text"]').value;
+        if(jobTitle === "") {
+            alert("ກະລຸນາປ້ອນຫົວຂໍ້ວຽກກ່ອນ!");
+        } else {
+            alert("ກຳລັງໂພສວຽກ: " + jobTitle);
+            // ບ່ອນນີ້ເຈົ້າສາມາດຂຽນ code ຕໍ່ເພື່ອສົ່ງຂໍ້ມູນໄປຫາ Backend/API
         }
     });
 
-    // 3. ເວລາກົດ Continue
-    jobForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('ກຳລັງບັນທຶກຂໍ້ມູນວຽກໃໝ່...');
-        console.log('Form data captured!');
+    // logic ລຶບ Skill (Tag)
+    const tags = document.querySelectorAll('.tag i');
+    tags.forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            e.target.parentElement.remove();
+        });
     });
+
 });

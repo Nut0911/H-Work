@@ -5,103 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post a Job - H-WORK</title>
     <link rel="stylesheet" href="post-job.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo"><h2>H-WORK</h2></div>
-            <ul class="nav-menu">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="Jobboroad DEV-Hwork.html">Job Board</a></li>
-                <li><a href="#">Company</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="icon-btn">🔔</button>
-                <button class="nav-btn-primary">Post a Job</button>
-                <div class="user-avatar"></div>
-            </div>
-        </div>
-    </nav>
 
-    <main class="main-content">
-        <div class="header-section">
-            <span class="badge">HIRING PORTAL</span>
-            <h1>Create a New <br><span class="highlight">Opportunity.</span></h1>
-            
-            <div class="role-selector">
-                <button class="role-btn active">Developer</button>
-                <button class="role-btn">Hiring Company</button>
-            </div>
+    <header class="navbar">
+        <div class="logo">H-WORK</div>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">Job Board</a>
+            <a href="#">Company</a>
+        </nav>
+        <div class="nav-right">
+            <i class="fa-regular fa-bell"></i>
+            <i class="fa-solid fa-globe"></i>
+            <button class="btn-post">Post a Job</button>
+            <img src="https://via.placeholder.com/35" alt="Profile" class="profile-img">
+        </div>
+    </header>
+
+    <main class="container">
+        <span class="badge">HIRING PORTAL</span>
+        <h1>Create a New <br><span class="blue-text">Opportunity.</span></h1>
+
+        <div class="toggle-container">
+            <button class="toggle-btn active">Developer</button>
+            <button class="toggle-btn">Hiring Company</button>
         </div>
 
         <div class="form-card">
-            <form id="jobForm">
-                <div class="input-group">
-                    <label>JOB TITLE</label>
-                    <input type="text" placeholder="e.g. Senior Full-Stack Architect" required>
-                </div>
+            <div class="form-group">
+                <label>JOB TITLE</label>
+                <input type="text" placeholder="e.g. Senior Full-Stack Architect">
+            </div>
 
-                <div class="row">
-                    <div class="input-group">
-                        <label>JOB CATEGORY</label>
-                        <select>
-                            <option>Engineering</option>
-                            <option>Design</option>
-                            <option>Marketing</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <label>WORK TYPE</label>
-                        <select>
-                            <option>Remote</option>
-                            <option>On-site</option>
-                            <option>Hybrid</option>
-                        </select>
-                    </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>JOB CATEGORY</label>
+                    <select>
+                        <option>Fullstack Developer</option>
+                        <option>Frontend Developer</option>
+                        <option>Backend Developer</option>
+                    </select>
                 </div>
+                <div class="form-group">
+                    <label>WORK TYPE</label>
+                    <select>
+                        <option>Remote</option>
+                        <option>On-site</option>
+                        <option>Hybrid</option>
+                    </select>
+                </div>
+            </div>
 
-                <div class="input-group">
-                    <label>JOB DESCRIPTION</label>
-                    <div class="editor-toolbar">
-                        <span>B</span> <span>I</span> <span>list</span> <span>link</span>
-                    </div>
-                    <textarea placeholder="Outline the core responsibilities..."></textarea>
+            <div class="form-group">
+                <label>JOB DESCRIPTION</label>
+                <div class="editor-toolbar">
+                    <button><i class="fa-solid fa-bold"></i></button>
+                    <button><i class="fa-solid fa-italic"></i></button>
+                    <button><i class="fa-solid fa-list"></i></button>
+                    <button><i class="fa-solid fa-link"></i></button>
                 </div>
+                <textarea rows="6" placeholder="Outline the core responsibilities and vision for this role..."></textarea>
+            </div>
 
-                <div class="input-group">
-                    <label>TECHNICAL STACK</label>
-                    <div class="skills-container" id="skillsList">
-                        <span class="skill-tag">React ✕</span>
-                        <span class="skill-tag">TypeScript ✕</span>
-                        <span class="skill-tag">Node.js ✕</span>
-                        <button type="button" class="add-skill-btn">+ Add Skill</button>
-                    </div>
+            <div class="form-group">
+                <label>TECHNICAL STACK</label>
+                <div class="tags-input">
+                    <span class="tag">React <i class="fa-solid fa-xmark"></i></span>
+                    <span class="tag">TypeScript <i class="fa-solid fa-xmark"></i></span>
+                    <span class="tag">Node.js <i class="fa-solid fa-xmark"></i></span>
+                    <button class="btn-add-skill">+ Add Skill</button>
                 </div>
+            </div>
 
-                <div class="input-group">
-                    <label>SALARY RANGE (ANNUAL USD)</label>
-                    <div class="row">
-                        <input type="number" placeholder="$ Min">
-                        <input type="number" placeholder="$ Max">
-                    </div>
+            <div class="form-group">
+                <label>SALARY RANGE (ANNUAL USD)</label>
+                <div class="form-row">
+                    <input type="number" placeholder="$ Min">
+                    <input type="number" placeholder="$ Max">
                 </div>
+            </div>
 
-                <div class="form-footer">
-                    <button type="button" class="btn-text">💾 Save as Draft</button>
-                    <button type="submit" class="btn-continue">Continue</button>
-                </div>
-            </form>
+            <div class="form-footer">
+                <button class="btn-draft"><i class="fa-regular fa-envelope"></i> Save as Draft</button>
+                <button class="btn-submit">Post</button>
+            </div>
         </div>
 
         <div class="tip-card">
-            <div class="tip-icon">💡</div>
-            <div class="tip-content">
-                <strong>Architect's Tip</strong>
-                <p>Listings with precise tech stacks and salary ranges receive <span class="blue-text">42% more applications</span>.</p>
+            <div class="tip-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="tip-text">
+                <strong>Architect's Tip</strong><br>
+                Listings with precise tech stacks and salary ranges receive <span class="blue-text">42% more applications</span> from top-tier senior candidates.
             </div>
         </div>
     </main>
+
+    <footer class="footer">
+        <p>© 2024 H-WORK. BUILT FOR THE CURATED ARCHITECT.</p>
+        <div class="footer-links">
+            <a href="#">DOCUMENTATION</a>
+            <a href="#">PRIVACY POLICY</a>
+            <a href="#">TERMS OF SERVICE</a>
+            <a href="#">ARCHITECTURE API</a>
+        </div>
+    </footer>
 
     <script src="post-job.js"></script>
 </body>
