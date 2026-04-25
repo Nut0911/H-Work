@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-Work: Profile</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="header-left">
+                <div class="logo-container">
+                    <a href="/home.html"><img src="/picture/Logo3.png" alt="Logo" class="main-logo"></a>
+                    <span class="logo-text">H-WORK</span>
+                </div>
+                <nav class="main-nav">
+                    <a href="/home.html">Home</a>
+                    <a href="#">Job Board</a>
+                    <a href="#">Company</a>
+                </nav>
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn"><i class="far fa-bell"></i></button>
+                <button class="icon-btn"><i class="fa-solid fa-globe"></i></button>
+                <button class="btn btn-primary post-job-btn">Post a Job</button>
+                <a href="/signup.html"><button class="btn" style="background-color: #e54b4b; color: white;">Log out</button></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="profile-page container">
+        <aside class="profile-sidebar">
+            <div class="profile-card">
+                <div class="avatar-container">
+                    <div class="big-avatar"></div>
+                    <button class="edit-avatar-btn"><i class="fa-solid fa-pencil"></i></button>
+                </div>
+                <h1 class="user-name">A</h1>
+                <p class="user-title">Senior Fullstack Architect</p>
+                <p class="user-location"><i class="fa-solid fa-location-dot"></i> Vientiane, Laos</p>
+                <p class="user-bio">
+                    Architecting scalable distributed systems with a focus on high-performance React applications and
+                    Rust-based microservices. Passionate about developer experience and clean code.
+                </p>
+                <div class="social-links">
+                    <div class="social-box"></div>
+                    <div class="social-box"></div>
+                    <div class="social-box"></div>
+                </div>
+            </div>
+
+            <div class="expertise-card">
+                <h3>EXPERTISE</h3>
+                <div class="expertise-tags">
+                    <span>React / Next.js</span>
+                    <span>Rust</span>
+                    <span>Kubernetes</span>
+                    <span>GraphQL</span>
+                    <span>TypeScript</span>
+                    <span>PostgreSQL</span>
+                    <span>AWS Architecture</span>
+                </div>
+            </div>
+        </aside>
+
+        <section class="profile-main-content">
+            <div class="content-section">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="experience-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="exp-header">
+                            <div>
+                                <h4>Lead Systems Architect</h4>
+                                <p class="company-name">TechFlow Systems</p>
+                            </div>
+                            <span class="exp-date">2021 — PRESENT</span>
+                        </div>
+                        <p class="exp-desc">Spearheaded the migration of monolithic infrastructure to a serverless
+                            architecture, reducing latency by 45% and operational costs by $200k annually. Mentored a
+                            team of 15 senior engineers.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="exp-header">
+                            <div>
+                                <h4>Senior Frontend Engineer</h4>
+                                <p class="company-name">Designify AI</p>
+                            </div>
+                            <span class="exp-date">2018 — 2021</span>
+                        </div>
+                        <p class="exp-desc">Built a proprietary design-to-code engine using React and WebAssembly.
+                            Improved core web vitals by 60% across the main product dashboard.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="section-header-inline">
+                    <h2 class="section-title">Saved Opportunities</h2>
+                    <a href="#" class="view-all-link">View All (12)</a>
+                </div>
+                <div class="saved-jobs-grid">
+                    <div class="mini-job-card">
+                        <div class="mini-job-header">
+                            <div class="mini-logo-placeholder blue"><i class="fa-solid fa-cloud"></i></div>
+                            <div>
+                                <h4>Staff Infrastructure Engineer</h4>
+                                <p>CLOUDSCALE GLOBAL</p>
+                            </div>
+                        </div>
+                        <div class="mini-job-footer">
+                            <div class="mini-tags">
+                                <span>REMOTE</span>
+                                <span>$180K - $240K</span>
+                            </div>
+                            <button class="btn-apply-mini">Apply Now</button>
+                        </div>
+                    </div>
+
+                    <div class="mini-job-card">
+                        <div class="mini-job-header">
+                            <div class="mini-logo-placeholder green"><i class="fa-solid fa-bolt"></i></div>
+                            <div>
+                                <h4>Principal React Architect</h4>
+                                <p>VORTEX UI</p>
+                            </div>
+                        </div>
+                        <div class="mini-job-footer">
+                            <div class="mini-tags">
+                                <span>HYBRID</span>
+                                <span>$200K+</span>
+                            </div>
+                            <button class="btn-apply-mini">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer container">
+        <div class="footer-left">
+            <div class="logo-small">H-Work</div>
+            <p>© 2026 H-WORK. BUILT FOR THE CURATED ARCHITECT.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">DOCUMENTATION</a>
+            <a href="#">PRIVACY POLICY</a>
+            <a href="#">TERMS OF SERVICE</a>
+            <a href="#">ARCHITECTURE API</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
