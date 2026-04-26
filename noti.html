@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-Work: Notifications</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="noti.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="header-left">
+                <div class="logo-container">
+                    <a href="/home.html"><img src="/picture/Logo3.png" alt="Logo" class="main-logo"></a>
+                    <span class="logo-text">H-WORK</span>
+                </div>
+                <nav class="main-nav">
+                    <a href="/home.html">Home</a>
+                    <a href="#">Freelance</a>
+                    <a href="#">Company</a>
+                </nav>
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn active-icon"><i class="far fa-bell"></i></button>
+                <button class="icon-btn"><i class="fa-solid fa-globe"></i></button>
+                <button class="btn btn-primary post-job-btn">Post Job</button>
+                <a href="/profile.html" class="user-avatar"><i class="fa-solid fa-circle-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="notifications-page container">
+        <header class="page-title-area">
+            <h1>Notifications</h1>
+            <p>Stay updated with your career trajectory and platform insights.</p>
+        </header>
+
+        <div class="notifications-layout">
+            <aside class="notif-sidebar">
+                <div class="summary-card">
+                    <h3>SUMMARY</h3>
+                    <ul class="summary-list">
+                        <li class="active">Unread <span class="badge blue">12</span></li>
+                        <li>Job Matches <span class="badge green">4</span></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="notif-content">
+                <div class="tab-container-wrapper">
+                    <div class="notif-filter-tabs">
+                        <button class="tab active">All</button>
+                        <button class="tab">Applications</button>
+                        <button class="tab">Messages</button>
+                    </div>
+                </div>
+
+                <div class="notif-list">
+                    <div class="notif-card unread">
+                        <div class="notif-card-main">
+                            <div class="notif-icon-box status-blue">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <div class="notif-info">
+                                <span class="notif-category">APPLICATION STATUS</span>
+                                <h4>Your application for Senior Systems Architect at CloudScale was viewed.</h4>
+                                <a href="#" class="notif-action-link">Track Application <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <span class="notif-time">2m ago</span>
+                    </div>
+
+                    <div class="notif-card unread">
+                        <div class="notif-card-main">
+                            <div class="notif-icon-box status-green">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+                            <div class="notif-info">
+                                <span class="notif-category">NEW MATCH</span>
+                                <h4>New job match: Lead React Developer at Vercel.</h4>
+                                <div class="skill-tags">
+                                    <span>React</span>
+                                    <span>Next.js</span>
+                                    <span>$180k+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="notif-time">1h ago</span>
+                        <div class="salary-tag">$160k – $210k</div>
+                    </div>
+
+                    <div class="notif-card unread">
+                        <div class="notif-card-main">
+                            <div class="notif-icon-box status-grey">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="notif-info">
+                                <span class="notif-category">MESSAGE</span>
+                                <h4>Sarah from Stripe sent you a message.</h4>
+                                <p class="notif-excerpt">"Hey! I saw your recent architecture documentation for..."</p>
+                                <a href="#" class="notif-action-link">Reply Now</a>
+                            </div>
+                        </div>
+                        <span class="notif-time">4h ago</span>
+                        <i class="fa-solid fa-comment-dots notif-chat-icon"></i>
+                    </div>
+
+                    <div class="notif-card">
+                        <div class="notif-card-main">
+                            <div class="notif-icon-box status-grey">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <div class="notif-info">
+                                <span class="notif-category">SYSTEM UPDATE</span>
+                                <h4>System Update: Your profile is now <span class="text-highlight">100%
+                                        complete</span>.</h4>
+                                <div class="system-inner-box">
+                                    <i class="fa-solid fa-circle-check system-check-icon"></i>
+                                    <p>You are now eligible for "Top Talent" badges on upcoming applications.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="notif-time">Yesterday</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer container">
+        <div class="footer-left">
+            <div class="logo-small">H-Work</div>
+            <p>© 2026 H-WORK. BUILT FOR THE CURATED ARCHITECT.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">DOCUMENTATION</a>
+            <a href="#">PRIVACY POLICY</a>
+            <a href="#">TERMS OF SERVICE</a>
+            <a href="#">ARCHITECTURE API</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+/* --- VARIABLES --- */
+:root {
+    --primary-color: #0066ff;
+    --bg-body: #f9fafb;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --text-light: #9ca3af;
+    --border-color: #f3f4f6;
+    --white: #ffffff;
+    --radius-lg: 24px;
+    /* ความมนขนาดใหญ่ตามต้นแบบ */
+    --radius-md: 16px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.notifications-page {
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.page-title-area h1 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+/* --- SIDEBAR --- */
+.notif-sidebar .summary-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.summary-list li {
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.summary-list li.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.badge {
+    padding: 4px 12px;
+    border-radius: 99px;
+    font-size: 12px;
+}
+
+/* --- TAB FILTER (ปรับให้เป็นแถบสีเทาอ่อนเหมือนต้นแบบ) --- */
+.tab-container-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    /* จัด Tab ไว้ฝั่งขวาตามรูป */
+    margin-bottom: 24px;
+}
+
+.notif-filter-tabs {
+    background: #f3f4f6;
+    padding: 4px;
+    border-radius: 12px;
+    display: inline-flex;
+}
+
+.tab {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tab.active {
+    background: var(--white);
+    color: var(--text-main);
+    box-shadow: var(--shadow-sm);
+}
+
+/* --- NOTIFICATION CARD --- */
+.notif-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    margin-bottom: 16px;
+    position: relative;
+    display: flex;
+    transition: 0.3s;
+}
+
+.notif-card.unread {
+    border-left: 5px solid var(--primary-color);
+    /* เน้นเส้นข้างให้ชัดขึ้น */
+}
+
+.notif-icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.status-blue {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.status-green {
+    background: #f0fdf4;
+    color: #10b981;
+}
+
+.status-grey {
+    background: #f9fafb;
+    color: #6b7280;
+}
+
+.notif-info h4 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.text-highlight {
+    color: var(--primary-color);
+}
+
+.notif-time {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+/* --- SYSTEM BOX INNER --- */
+.system-inner-box {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.system-check-icon {
+    color: #10b981;
+    font-size: 18px;
+}
+
+.system-inner-box p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* --- SPECIALTY TAGS --- */
+.salary-tag {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: #f0fdf4;
+    color: #10b981;
+    padding: 6px 16px;
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.notif-chat-icon {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: var(--primary-color);
+    font-size: 22px;
+}
+
+.notif-action-link {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
