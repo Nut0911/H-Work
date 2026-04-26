@@ -1,0 +1,84 @@
+:root {
+    --primary-blue: #2563eb;
+    --bg-light: #f8fafc;
+    --text-dark: #1e293b;
+    --gray-light: #e2e8f0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.logo { font-weight: bold; font-size: 1.2rem; }
+nav a { text-decoration: none; margin: 0 15px; color: gray; font-size: 0.9rem; }
+nav a.active { color: var(--primary-blue); font-weight: bold; }
+
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.btn-post { background: var(--primary-blue); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; }
+.profile-img { border-radius: 50%; width: 35px; height: 35px; border: 1px solid #ddd; }
+
+/* Main Content */
+.container { max-width: 700px; margin: 40px auto; padding: 0 20px; }
+.badge { font-size: 10px; background: #dbeafe; color: var(--primary-blue); padding: 4px 8px; border-radius: 4px; font-weight: bold; }
+h1 { font-size: 2.5rem; margin: 10px 0; }
+.blue-text { color: var(--primary-blue); }
+
+/* Toggle Button */
+.toggle-container { background: #eef2f6; display: inline-flex; padding: 4px; border-radius: 30px; margin-bottom: 30px; }
+.toggle-btn { border: none; padding: 8px 25px; border-radius: 25px; cursor: pointer; background: transparent; font-weight: 500; }
+.toggle-btn.active { background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+/* Form Card */
+.form-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.form-group { margin-bottom: 20px; }
+label { display: block; font-size: 0.75rem; font-weight: bold; color: #64748b; margin-bottom: 8px; }
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #f8fafc;
+    box-sizing: border-box;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+/* Editor Toolbar */
+.editor-toolbar { border: 1px solid #e2e8f0; border-bottom: none; border-radius: 8px 8px 0 0; padding: 8px; background: white; display: flex; gap: 10px; }
+.editor-toolbar button { background: none; border: none; cursor: pointer; color: #64748b; }
+textarea { border-top-left-radius: 0; border-top-right-radius: 0; }
+
+/* Tags */
+.tags-input { display: flex; gap: 10px; flex-wrap: wrap; }
+.tag { background: #dbeafe; color: var(--primary-blue); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; }
+.btn-add-skill { border: none; background: #eff6ff; color: var(--primary-blue); padding: 5px 15px; border-radius: 20px; cursor: pointer; font-weight: 500; }
+
+/* Footer Form */
+.form-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 30px; }
+.btn-draft { background: none; border: none; color: #64748b; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+.btn-submit { background: var(--primary-blue); color: white; border: none; padding: 12px 40px; border-radius: 30px; font-weight: bold; cursor: pointer; }
+
+/* Tip Card */
+.tip-card { background: #f0f9ff; padding: 20px; border-radius: 15px; margin-top: 20px; display: flex; gap: 15px; align-items: flex-start; border: 1px solid #e0f2fe; }
+.tip-icon { background: #0e7490; color: white; padding: 8px; border-radius: 8px; }
+.tip-text { font-size: 0.85rem; line-height: 1.5; }
+
+/* Bottom Footer */
+.footer { margin-top: 50px; text-align: center; border-top: 1px solid #ddd; padding: 20px 0; font-size: 0.75rem; color: #94a3b8; }
+.footer-links { margin-top: 10px; display: flex; justify-content: center; gap: 20px; }
+.footer-links a { text-decoration: none; color: #64748b; }

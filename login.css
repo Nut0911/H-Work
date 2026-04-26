@@ -1,0 +1,326 @@
+.navbar {
+    background-color: white;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02); /* ເພີ່ມເງົາບາງໆໃຫ້ເບິ່ງມີມິຕິ */
+}
+
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* ແຍກຊ້າຍ-ຂວາ */
+    align-items: center;
+    width: 100%;
+    max-width: 1300px; /* ປັບຄວາມກວ້າງໃຫ້ເໝາະກັບ Desktop */
+    padding: 0 40px;
+}
+
+/* ຈັດວາງ Logo ແລະ ຊື່ H-WORK */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* ໄລຍະຫ່າງລະຫວ່າງ Logo ແລະ ຊື່ */
+    cursor: pointer;
+}
+
+.main-logo {
+    height: 90px; /* ປັບຂະໜາດ Logo ໃຫ້ພໍດີ */
+    width: auto;
+    object-fit: contain;
+}
+
+
+
+.brand-name {
+    font-size: 22px;
+    font-weight: 800; /* ຕົວໜັງສືເຂັ້ມ */
+    color: #111827;
+    letter-spacing: -0.5px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ປຸ່ມ Log In ໃຫ້ຄືໃນຮູບ */
+.nav-btn-primary {
+    background-color: #2563eb;
+    color: white !important;
+    padding: 10px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.nav-btn-primary {
+    background-color: #2563eb;
+    color: white !important;
+    padding: 10px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    color: #000;
+    letter-spacing: 1px;
+}
+.img-logo {
+    width: 10px;
+    height: 10px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+
+
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin-left: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #2563eb;
+}
+
+/* ປຸ່ມ Login ແບບເດັ່ນໆ */
+.nav-btn-primary {
+    background-color: #2563eb;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+.nav-btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+/* ປັບແຕ່ງ Body ເພາະ Navbar ບັງ */
+body {
+    padding-top: 100px; /* ຍັບເນື້ອຫາລົງມາເພື່ອບໍ່ໃຫ້ Navbar ບັງ */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-section h1 {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+}
+
+.logo-section p {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    border: 3px solid #3b82f6; /* ສີຟ້າຕາມຂອບໃນຮູບ */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.login-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #444;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgot-link {
+    font-size: 0.75rem;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 15px;
+    color: #888;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    background-color: #e5e7eb;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+
+#togglePassword {
+    left: auto;
+    right: 15px;
+    cursor: pointer;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color  0.3s;
+}
+
+.btn-login:hover {
+    background-color: #1d4ed8;
+}
+
+.divider {
+    margin: 25px 0;
+    position: relative;
+    border-top: 1px solid #ddd;
+}
+
+.divider span {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 0 10px;
+    font-size: 0.7rem;
+    color: #999;
+}
+
+.social-login {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-social {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #e5e7eb;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn-social img {
+    width: 18px;
+}
+
+.signup-text {
+    font-size: 0.9rem;
+}
+
+.signup-text a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.features {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #666;
+}
+
+.bottom-footer {
+    margin-top: 50px;
+    font-size: 0.65rem;
+    color: #999;
+}
+
+.footer-links {
+    margin-top: 5px;
+}
+
+.footer-links a {
+    color: #686363;
+    text-decoration: none;
+    margin: 0 10px;
+}

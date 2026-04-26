@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-Work | Backend Architecture</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="Company.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo"><h2>H-Work</h2></div>
+        <nav class="nav-menu">
+            <a href="#">Home</a>
+            <a href="#">Freelance</a>
+            <a href="#" class="active">Company</a>
+        </nav>
+        <div class="nav-right">
+            <i class="fa-regular fa-bell"></i>
+            <i class="fa-solid fa-globe"></i>
+            <button class="btn-post">Post a Job</button>
+            <img src="/png/ProF.png" alt="User" class="profile-img">
+        </div>
+    </header>
+
+    <div class="layout-container">
+        <aside class="sidebar">
+            <div class="filter-group">
+                <h3>DISCIPLINE</h3>
+                <div class="filter-item active">Backend <i class="fa-solid fa-check"></i></div>
+                <div class="filter-item">Frontend</div>
+                <div class="filter-item">Fullstack</div>
+                <div class="filter-item">Cyber Security</div>
+            </div>
+
+            <div class="filter-group">
+                <h3>CORE STACK</h3>
+                <div class="stack-tags">
+                    <span>Node.js</span><span>Python</span><span>Go</span>
+                    <span>Java</span><span>Rust</span><span>C++</span>
+                </div>
+            </div>
+            <button class="btn-post-sidebar">Post a Job</button>
+        </aside>
+
+        <main class="content">
+            <div class="page-header">
+                <h1>Backend Architecture</h1>
+                <p>32 specialized roles found in distributed systems & API design.</p>
+            </div>
+
+            <div id="featured-job-container"></div>
+
+            <div class="job-grid" id="job-list-container">
+                </div>
+        </main>
+    </div>
+
+    <script src="Company.js"></script>
+</body>
+</html>
