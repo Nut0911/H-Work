@@ -29,7 +29,8 @@
                 <button class="icon-btn active-icon"><i class="far fa-bell"></i></button>
                 <button class="icon-btn"><i class="fa-solid fa-globe"></i></button>
                 <button class="btn btn-primary post-job-btn">Post Job</button>
-                <a href="/profile.html" class="user-avatar"><i class="fa-solid fa-circle-user"></i></a>
+                <a href="/profile.html"><button class="user-avatar"><img src="/picture/profile.jpeg"
+                            alt="Profile"></button></a>
             </div>
         </div>
     </header>
@@ -45,14 +46,20 @@
                 <div class="summary-card">
                     <h3>SUMMARY</h3>
                     <ul class="summary-list">
-                        <li class="active">Unread <span class="badge blue">12</span></li>
-                        <li>Job Matches <span class="badge green">4</span></li>
+                        <li class="active">
+                            <span>Unread</span>
+                            <span class="badge blue">12</span>
+                        </li>
+                        <li>
+                            <span>Job Matches</span>
+                            <span class="badge green">4</span>
+                        </li>
                     </ul>
                 </div>
             </aside>
 
             <section class="notif-content">
-                <div class="tab-container-wrapper">
+                <div class="tab-header">
                     <div class="notif-filter-tabs">
                         <button class="tab active">All</button>
                         <button class="tab">Applications</button>
@@ -62,71 +69,71 @@
 
                 <div class="notif-list">
                     <div class="notif-card unread">
-                        <div class="notif-card-main">
-                            <div class="notif-icon-box status-blue">
-                                <i class="fa-solid fa-briefcase"></i>
-                            </div>
-                            <div class="notif-info">
+                        <div class="notif-icon-box status-blue">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="notif-info">
+                            <div class="notif-meta">
                                 <span class="notif-category">APPLICATION STATUS</span>
-                                <h4>Your application for Senior Systems Architect at CloudScale was viewed.</h4>
-                                <a href="#" class="notif-action-link">Track Application <i
-                                        class="fa-solid fa-arrow-right"></i></a>
+                                <span class="notif-time">2m ago</span>
                             </div>
+                            <h4>Your application for Senior Systems Architect at CloudScale was viewed.</h4>
+                            <a href="#" class="notif-action-link">Track Application <i
+                                    class="fa-solid fa-arrow-right"></i></a>
                         </div>
-                        <span class="notif-time">2m ago</span>
                     </div>
 
                     <div class="notif-card unread">
-                        <div class="notif-card-main">
-                            <div class="notif-icon-box status-green">
-                                <i class="fa-solid fa-rocket"></i>
-                            </div>
-                            <div class="notif-info">
+                        <div class="notif-icon-box status-green">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <div class="notif-info">
+                            <div class="notif-meta">
                                 <span class="notif-category">NEW MATCH</span>
-                                <h4>New job match: Lead React Developer at Vercel.</h4>
-                                <div class="skill-tags">
-                                    <span>React</span>
-                                    <span>Next.js</span>
-                                    <span>$180k+</span>
-                                </div>
+                                <span class="notif-time">1h ago</span>
                             </div>
+                            <h4>New job match: Lead React Developer at Vercel.</h4>
+                            <div class="skill-tags">
+                                <span>React</span>
+                                <span>Next.js</span>
+                                <span>$180k+</span>
+                            </div>
+                            <div class="salary-tag">$160k – $210k</div>
                         </div>
-                        <span class="notif-time">1h ago</span>
-                        <div class="salary-tag">$160k – $210k</div>
                     </div>
 
                     <div class="notif-card unread">
-                        <div class="notif-card-main">
-                            <div class="notif-icon-box status-grey">
-                                <i class="fa-solid fa-user"></i>
-                            </div>
-                            <div class="notif-info">
-                                <span class="notif-category">MESSAGE</span>
-                                <h4>Sarah from Stripe sent you a message.</h4>
-                                <p class="notif-excerpt">"Hey! I saw your recent architecture documentation for..."</p>
-                                <a href="#" class="notif-action-link">Reply Now</a>
-                            </div>
+                        <div class="notif-icon-box status-grey">
+                            <i class="fa-solid fa-user"></i>
                         </div>
-                        <span class="notif-time">4h ago</span>
-                        <i class="fa-solid fa-comment-dots notif-chat-icon"></i>
+                        <div class="notif-info">
+                            <div class="notif-meta">
+                                <span class="notif-category">MESSAGE</span>
+                                <span class="notif-time">4h ago</span>
+                            </div>
+                            <h4>Sarah from Stripe sent you a message.</h4>
+                            <p class="notif-excerpt">"Hey! I saw your recent architecture documentation for..."</p>
+                            <a href="#" class="notif-action-link">Reply Now</a>
+                            <i class="fa-solid fa-comment-dots notif-chat-icon"></i>
+                        </div>
                     </div>
 
                     <div class="notif-card">
-                        <div class="notif-card-main">
-                            <div class="notif-icon-box status-grey">
-                                <i class="fa-solid fa-circle-check"></i>
-                            </div>
-                            <div class="notif-info">
+                        <div class="notif-icon-box status-grey">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="notif-info">
+                            <div class="notif-meta">
                                 <span class="notif-category">SYSTEM UPDATE</span>
-                                <h4>System Update: Your profile is now <span class="text-highlight">100%
-                                        complete</span>.</h4>
-                                <div class="system-inner-box">
-                                    <i class="fa-solid fa-circle-check system-check-icon"></i>
-                                    <p>You are now eligible for "Top Talent" badges on upcoming applications.</p>
-                                </div>
+                                <span class="notif-time">Yesterday</span>
+                            </div>
+                            <h4>System Update: Your profile is now <span class="text-highlight">100% complete</span>.
+                            </h4>
+                            <div class="system-inner-box">
+                                <i class="fa-solid fa-circle-check system-check-icon"></i>
+                                <p>You are now eligible for "Top Talent" badges on upcoming applications.</p>
                             </div>
                         </div>
-                        <span class="notif-time">Yesterday</span>
                     </div>
                 </div>
             </section>
