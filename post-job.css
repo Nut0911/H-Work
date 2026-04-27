@@ -13,14 +13,20 @@ body {
 }
 
 /* Navbar Fix */
-.navbar {
+/* --- Navbar CSS (ยึดตามหน้า Profile) --- */
+.main-header {
     background: white;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     padding: 12px 0;
+    /* ปรับ padding ให้เท่าหน้าอื่น */
 }
 
-.nav-container {
-    max-width: 1100px;
+.container.header-content {
+    max-width: 1200px;
+    /* คุมความกว้างไม่ให้ล้นจอ */
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -28,41 +34,82 @@ body {
     padding: 0 20px;
 }
 
-.logo {
-    font-weight: 800;
-    font-size: 1.2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #64748b;
-    margin: 0 15px;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.nav-right {
+.header-left,
+.header-actions {
     display: flex;
     align-items: center;
-    gap: 18px;
-    color: #64748b;
+    gap: 30px;
 }
 
-.btn-post-job {
-    background: var(--primary);
+/* Logo Setup */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-logo {
+    height: 32px;
+    /* ล็อกขนาดโลโก้ไม่ให้ใหญ่เว่อร์ */
+    width: auto;
+}
+
+.logo-text {
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* Nav Links */
+.main-nav a {
+    text-decoration: none;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    color: #2563eb;
+}
+
+/* Header Actions */
+.header-actions {
+    gap: 15px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: #64748b;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon-btn:hover {
+    color: #2563eb;
+}
+
+/* ปุ่ม Post a Job ในหน้า Post a Job เอง */
+.post-job-btn {
+    background: #2563eb;
     color: white;
     border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
     cursor: pointer;
-    font-weight: 600;
 }
 
-.profile-circle img {
-    width: 34px;
-    height: 34px;
+/* รูปโปรไฟล์ใน Nav */
+.nav-profile-pic img {
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     object-fit: cover;
+    border: 2px solid #f1f5f9;
 }
 
 /* Main Content */
