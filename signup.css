@@ -79,18 +79,6 @@ body {
     left: 0;
     background-color: #2563eb;
     /* สีฟ้า */
-    transition: width 0.3s ease;
-    /* ทำให้เส้นค่อยๆ ยืดออกมา */
-}
-
-/* เมื่อเอาเมาส์ไปชี้ (Hover) ให้เส้นยืดออกมา */
-.navbar nav a:hover {
-    color: #2563eb;
-}
-
-.navbar nav a:hover::after {
-    width: 100%;
-    /* เส้นยืดเต็มความกว้างข้อความ */
 }
 
 /* สถานะ Active (หน้าที่เราอยู๋ปัจจุบัน) ให้เส้นค้างไว้เลย */
@@ -273,4 +261,49 @@ body {
 
 .footer-link a:hover {
     text-decoration: underline;
+}
+
+/* --- Footer Styles --- */
+.login-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    border-top: 1px solid #e2e8f0;
+    margin-top: auto;
+    /* ช่วยดัน Footer ลงข้างล่างสุด */
+}
+
+.footer-left p {
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.footer-right {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-right a {
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+    color: #232424;
+    /* สีฟ้าประจำแบรนด์ H-WORK */
+}
+
+/* สำคัญ: เพื่อให้ Footer ติดขอบล่างเสมอแม้เนื้อหาจะน้อย */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }

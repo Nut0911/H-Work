@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="lo">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,110 +8,104 @@
     <link rel="stylesheet" href="post-job.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <header class="navbar">
-        <div class="logo">H-WORK</div>
-        <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">Job Board</a>
-            <a href="#">Company</a>
-        </nav>
-        <div class="nav-right">
-            <i class="fa-regular fa-bell"></i>
-            <i class="fa-solid fa-globe"></i>
-            <button class="btn-post">Post a Job</button>
-            <img src="/png/WhatsApp Image 2026-04-25 at 15.13.09.jpeg" alt="Profile" class="profile-img">
+        <div class="nav-container">
+            <div class="logo">H-WORK</div>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Freelance</a>
+                <a href="#">Company</a>
+            </nav>
+            <div class="nav-right">
+                <i class="fa-regular fa-bell"></i>
+                <i class="fa-solid fa-globe"></i>
+                <button class="btn-post-job">Post a Job</button>
+                <div class="profile-circle">
+                    <img src="/picture/profile.jpeg" alt="Profile">
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <span class="badge">HIRING PORTAL</span>
-        <h1>Create a New <br><span class="blue-text">Opportunity.</span></h1>
-
-        <div class="toggle-container">
-            <button class="toggle-btn active">Developer</button>
-            <button class="toggle-btn">Hiring Company</button>
+    <main class="main-content">
+        <div class="portal-header">
+            <span class="badge">HIRING PORTAL</span>
+            <h1>Create a New <br><span class="blue-text">Opportunity.</span></h1>
         </div>
 
-        <div class="form-card">
-            <div class="form-group">
+        <div class="toggle-switch">
+            <button class="toggle-opt active">Developer</button>
+            <button class="toggle-opt">Hiring Company</button>
+        </div>
+
+        <div class="job-form-card">
+            <div class="input-group">
                 <label>JOB TITLE</label>
                 <input type="text" placeholder="e.g. Senior Full-Stack Architect">
             </div>
 
-            <div class="form-row">
-                <div class="form-group">
+            <div class="input-row">
+                <div class="input-group">
                     <label>JOB CATEGORY</label>
                     <select>
-                        <option>Fullstack Developer</option>
-                        <option>Frontend Developer</option>
-                        <option>Backend Developer</option>
+                        <option>Cybersecurity</option>
+                        <option>Fullstack</option>
+                        <option>Frontend</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="input-group">
                     <label>WORK TYPE</label>
                     <select>
+                        <option>Part Time</option>
+                        <option>Full Time</option>
                         <option>Remote</option>
-                        <option>On-site</option>
-                        <option>Hybrid</option>
                     </select>
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="input-group">
                 <label>JOB DESCRIPTION</label>
-                <div class="editor-toolbar">
-                    <button><i class="fa-solid fa-bold"></i></button>
-                    <button><i class="fa-solid fa-italic"></i></button>
-                    <button><i class="fa-solid fa-list"></i></button>
-                    <button><i class="fa-solid fa-link"></i></button>
-                </div>
-                <textarea rows="6" placeholder="Outline the core responsibilities and vision for this role..."></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>TECHNICAL STACK</label>
-                <div class="tags-input">
-                    <span class="tag">React <i class="fa-solid fa-xmark"></i></span>
-                    <span class="tag">TypeScript <i class="fa-solid fa-xmark"></i></span>
-                    <span class="tag">Node.js <i class="fa-solid fa-xmark"></i></span>
-                    <button class="btn-add-skill">+ Add Skill</button>
+                <div class="rich-editor">
+                    <div class="toolbar">
+                        <i class="fa-solid fa-bold"></i>
+                        <i class="fa-solid fa-italic"></i>
+                        <i class="fa-solid fa-list"></i>
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+                    <textarea rows="5"
+                        placeholder="Outline the core responsibilities and vision for the role..."></textarea>
                 </div>
             </div>
 
-            <div class="form-group">
-                <label>SALARY RANGE (ANNUAL USD)</label>
-                <div class="form-row">
-                    <input type="number" placeholder="$ Min">
-                    <input type="number" placeholder="$ Max">
-                </div>
-            </div>
-
-            <div class="form-footer">
-                <button class="btn-draft"><i class="fa-regular fa-envelope"></i> Save as Draft</button>
-                <button class="btn-submit">Post</button>
+            <div class="form-actions">
+                <button class="btn-draft"><i class="fa-regular fa-bookmark"></i> Save as Draft</button>
+                <button class="btn-continue">Continue</button>
             </div>
         </div>
 
-        <div class="tip-card">
+        <div class="architect-tip">
             <div class="tip-icon"><i class="fa-solid fa-lightbulb"></i></div>
-            <div class="tip-text">
-                <strong>Architect's Tip</strong><br>
-                Listings with precise tech stacks and salary ranges receive <span class="blue-text">42% more applications</span> from top-tier senior candidates.
+            <div class="tip-content">
+                <strong>Architect's Tip</strong>
+                <p>Listings with precise tech stacks and salary ranges receive <span class="blue-text">42% more
+                        applications</span> from top-tier senior candidates.</p>
             </div>
         </div>
     </main>
 
     <footer class="footer">
-        <p>© 2024 H-WORK. BUILT FOR THE CURATED ARCHITECT.</p>
-        <div class="footer-links">
-            <a href="#">DOCUMENTATION</a>
-            <a href="#">PRIVACY POLICY</a>
-            <a href="#">TERMS OF SERVICE</a>
-            <a href="#">ARCHITECTURE API</a>
+        <div class="footer-content">
+            <p>© 2026 H-WORK. BUILT FOR THE CURATED ARCHITECT.</p>
+            <div class="footer-links">
+                <a href="#">DOCUMENTATION</a>
+                <a href="#">PRIVACY POLICY</a>
+                <a href="#">TERMS OF SERVICE</a>
+                <a href="#">ARCHITECTURE API</a>
+            </div>
         </div>
     </footer>
-
-    <script src="post-job.js"></script>
 </body>
+
 </html>
