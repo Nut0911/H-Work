@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-WORK | Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="freelance.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="header-left">
+                <div class="logo-container">
+                    <a href="/index.html"><img src="picture/Logo3.png" alt="Logo" class="main-logo"></a>
+                    <span class="logo-text">H-WORK</span>
+                </div>
+                <nav class="main-nav">
+                    <a href="/index.html">Home</a>
+                    <a href="/freelance.html" class="active">Freelance</a>
+                    <a href="/Company.html">Company</a>
+                </nav>
+            </div>
+            <div class="header-actions">
+                <a href="/noti.html"><button class="icon-btn"><i class="far fa-bell"></i></button></a>
+                <button class="icon-btn"><i class="fa-solid fa-globe"></i></button>
+                <a href="/post-job.html"><button class="btn btn-primary post-job-btn">Post Job</button></a>
+                <a href="/profile.html">
+                    <button class="user-avatar">
+                        <img src="picture/profile.jpeg" alt="Profile">
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-layout">
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <h3 class="sidebar-label">Discipline</h3>
+                <div class="discipline-list">
+                    <a href="/freelance.html"><button class="discipline-btn active">Backend</button></a>
+                    <a href="/frontendFR.html"><button class="discipline-btn">Frontend</button></a>
+                    <button class="discipline-btn">Fullstack</button>
+                    <button class="discipline-btn">Cyber Security</button>
+                </div>
+
+                <h3 class="sidebar-label">Core Stack</h3>
+                <div class="stack-tags">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Go</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Rust</span>
+                    <span class="tag">Next.js</span>
+                </div>
+
+                <button class="btn-sidebar-post">Post Job</button>
+            </div>
+        </aside>
+
+        <main class="feed">
+            <div class="feed-header">
+                <h2>Backend Architecture</h2>
+                <p>8 specialized roles found in distributed systems & API design.</p>
+            </div>
+
+            <a href="viewprofileBN.html">
+                <div class="job-grid">
+                    <div class="job-card">
+                        <div class="card-header">
+                            <img src="picture/profile.jpeg" class="profile-pic">
+                            <div class="header-info">
+                                <h4>Staff Backend Engineer</h4>
+                                <p>Atuamai VONGDUANGSY</p>
+                            </div>
+                            <i class="far fa-bookmark bookmark-icon"></i>
+                        </div>
+                        <p class="job-desc">100+ years experience, trust me I'm highly professional no cap.</p>
+                        <div class="job-meta">
+                            <i class="fa-solid fa-location-dot"> <span>Vientiane, Laos</span> </i>
+                            <i class="fa-solid fa-money-bill-wave"> <span>$150k - $175k</span> </i>
+                        </div>
+                        <div class="tech-badges">
+                            <span class="badge-tech">React</span><span class="badge-tech">TypeScript</span><span
+                                class="badge-tech">Tailwind</span>
+                        </div>
+                    </div>
+            </a>
+
+
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="picture/profile.jpeg" class="profile-pic">
+                    <div class="header-info">
+                        <h4>Database Engineer</h4>
+                        <p>Souksanh Panyanouvong</p>
+                    </div>
+                    <i class="far fa-bookmark bookmark-icon"></i>
+                </div>
+                <p class="job-desc">Specializing in high-performance SQL clusters and data integrity.</p>
+                <div class="job-meta">
+                    <i class="fa-solid fa-location-dot"> <span>Vientiane, Laos</span> </i>
+                    <i class="fa-solid fa-money-bill-wave"> <span>$120k - $200k</span> </i>
+                </div>
+                <div class="tech-badges">
+                    <span class="badge-tech">PostgreSQL</span><span class="badge-tech">SQL</span>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="picture/profile.jpeg" class="profile-pic">
+                    <div class="header-info">
+                        <h4>DevOps Engineer</h4>
+                        <p>Souksavanh Panyanouvong</p>
+                    </div>
+                    <i class="far fa-bookmark bookmark-icon"></i>
+                </div>
+                <p class="job-desc">Managing Kubernetes at scale with 100% uptime infrastructure.</p>
+                <div class="job-meta">
+                    <i class="fa-solid fa-location-dot"> <span>Vientiane</span> </i>
+                    <i class="fa-solid fa-money-bill-wave"> <span>$180k - $220k</span> </i>
+                </div>
+                <div class="tech-badges"><span class="badge-tech">Docker</span><span class="badge-tech">AWS</span>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="picture/profile.jpeg" class="profile-pic">
+                    <div class="header-info">
+                        <h4>Senior Java Developer</h4>
+                        <p>Souksanh Pattana</p>
+                    </div>
+                    <i class="far fa-bookmark bookmark-icon"></i>
+                </div>
+                <p class="job-desc">Building robust microservices for fintech solutions.</p>
+                <div class="job-meta">
+                    <i class="fa-solid fa-location-dot"> <span>Vientiane</span> </i>
+                    <i class="fa-solid fa-money-bill-wave"> <span>$110k - $150k</span> </i>
+                </div>
+                <div class="tech-badges"><span class="badge-tech">Java</span><span class="badge-tech">Spring
+                        Boot</span></div>
+            </div>
+
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="picture/profile.jpeg" class="profile-pic">
+                    <div class="header-info">
+                        <h4>Staff Backend Engineer</h4>
+                        <p>Atuamai VONGDUANGSY</p>
+                    </div>
+                    <i class="far fa-bookmark bookmark-icon"></i>
+                </div>
+                <p class="job-desc">Cloud native architecture specialist.</p>
+                <div class="job-meta">
+                    <i class="fa-solid fa-location-dot"> <span>Vientiane</span> </i>
+                    <i class="fa-solid fa-money-bill-wave"> <span>$200k+</span> </i>
+                </div>
+                <div class="tech-badges"><span class="badge-tech">Node.js</span><span class="badge-tech">Go</span>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="picture/profile.jpeg" class="profile-pic">
+                    <div class="header-info">
+                        <h4>Cloud Backend Engineer</h4>
+                        <p>Souksanh Panyanouvong</p>
+                    </div>
+                    <i class="far fa-bookmark bookmark-icon"></i>
+                </div>
+                <p class="job-desc">Serverless expert and distributed systems architect.</p>
+                <div class="job-meta">
+                    <i class="fa-solid fa-location-dot"> <span>Vientiane</span> </i>
+                    <i class="fa-solid fa-money-bill-wave"> <span>$200k+</span> </i>
+                </div>
+                <div class="tech-badges"><span class="badge-tech">AWS</span><span class="badge-tech">Node.js</span>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="picture/profile.jpeg" class="profile-pic">
+                    <div class="header-info">
+                        <h4>Staff Backend Engineer</h4>
+                        <p>Atuamai VONGDUANGSY</p>
+                    </div>
+                    <i class="far fa-bookmark bookmark-icon"></i>
+                </div>
+                <p class="job-desc">100+ years experience, trust me I'm professional.</p>
+                <div class="job-meta">
+                    <i class="fa-solid fa-location-dot"> <span>Vientiane</span> </i>
+                    <i class="fa-solid fa-money-bill-wave"> <span>$150k - $175k</span> </i>
+                </div>
+                <div class="tech-badges"><span class="badge-tech">TypeScript</span><span
+                        class="badge-tech">Next.js</span></div>
+            </div>
+
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="picture/profile.jpeg" class="profile-pic">
+                    <div class="header-info">
+                        <h4>Software Architect</h4>
+                        <p>Atuamai VONGDUANGSY</p>
+                    </div>
+                    <i class="far fa-bookmark bookmark-icon"></i>
+                </div>
+                <p class="job-desc">The final boss of backend architecture.</p>
+                <div class="job-meta">
+                    <i class="fa-solid fa-location-dot"> <span>Vientiane</span> </i>
+                    <i class="fa-solid fa-money-bill-wave"> <span>$200k+</span> </i>
+                </div>
+                <div class="tech-badges"><span class="badge-tech">Rust</span><span class="badge-tech">Solidity</span>
+                </div>
+            </div>
+    </div>
+    </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>H-WORK</h3>
+                <p>© 2026 H-WORK - BUILT FOR THE CURATED ARCHITECT.</p>
+            </div>
+            <nav class="footer-links">
+                <a href="#">DOCUMENTATION</a>
+                <a href="#">PRIVACY POLICY</a>
+                <a href="#">TERMS OF SERVICE</a>
+                <a href="#">ARCHITECTURE API</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+
+</html>

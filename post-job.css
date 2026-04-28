@@ -13,7 +13,7 @@ body {
 }
 
 /* Navbar Fix */
-/* --- Navbar CSS (ยึดตามหน้า Profile) --- */
+/* --- Navbar CSS --- */
 .main-header {
     background: white;
     border-bottom: 1px solid #e2e8f0;
@@ -21,7 +21,6 @@ body {
     top: 0;
     z-index: 1000;
     padding: 12px 0;
-    /* ปรับ padding ให้เท่าหน้าอื่น */
 }
 
 .container.header-content {
@@ -50,7 +49,6 @@ body {
 
 .main-logo {
     height: 32px;
-    /* ล็อกขนาดโลโก้ไม่ให้ใหญ่เว่อร์ */
     width: auto;
 }
 
@@ -91,7 +89,6 @@ body {
     color: #2563eb;
 }
 
-/* ปุ่ม Post a Job ในหน้า Post a Job เอง */
 .post-job-btn {
     background: #2563eb;
     color: white;
@@ -103,7 +100,6 @@ body {
     cursor: pointer;
 }
 
-/* รูปโปรไฟล์ใน Nav */
 .nav-profile-pic img {
     width: 38px;
     height: 38px;
@@ -112,7 +108,6 @@ body {
     border: 2px solid #f1f5f9;
 }
 
-/* Main Content */
 .main-content {
     max-width: 650px;
     margin: 50px auto;
@@ -159,7 +154,7 @@ h1 {
 }
 
 .toggle-opt.active {
-    background: white;
+    background: rgb(255, 255, 255);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 

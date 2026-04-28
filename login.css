@@ -55,7 +55,6 @@ body {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    /* ลดช่องว่างระหว่าง Sign Up กับ Log In ลงนิดหน่อยเพื่อให้ดูไม่ห่างเกินไป */
 }
 
 /* --- Navbar Links & Active State --- */
@@ -66,43 +65,30 @@ body {
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
-    /* สำคัญสำหรับจัดตำแหน่งเส้นใต้ */
     padding: 4px 0;
-    /* เว้นระยะให้เส้นใต้ไม่ติดตัวหนังสือเกินไป */
 }
 
-/* สร้างเส้นใต้ (ใช้ Pseudo-element เพื่อให้ทำอนิเมชั่นได้สวย) */
 .navbar nav a::after {
     content: '';
     position: absolute;
     width: 0;
-    /* เริ่มต้นให้ความกว้างเป็น 0 (มองไม่เห็น) */
     height: 2px;
-    /* ความหนาของเส้นใต้ */
     bottom: 0;
     left: 0;
     background-color: #2563eb;
-    /* สีฟ้า */
 }
 
-/* สถานะ Active (หน้าที่เราอยู๋ปัจจุบัน) ให้เส้นค้างไว้เลย */
 .navbar nav a.active {
     color: #2563eb;
     font-weight: 600;
-    /* เพิ่มความหนานิดนึงให้เด่น */
 }
 
 .navbar nav a.active::after {
     width: 100%;
-    /* เส้นใต้ปรากฏค้างไว้ */
 }
 
-/* --- Common Button Styles (รวมส่วนที่ซ้ำกัน) --- */
-/* --- Common Button Styles (ปุ่มเล็กใน Navbar) --- */
-/* ใช้ class นี้ร่วมกันทั้งหน้า Sign Up และ Login */
 .btn-nav-style {
     padding: 0.5rem 1.5rem;
-    /* ขนาดเดียวกับปุ่ม Log In เดิมในหน้า Sign Up */
     border-radius: 8px;
     background: #2563eb;
     color: white;
@@ -110,7 +96,6 @@ body {
     cursor: pointer;
     font-weight: 600;
     font-size: 14px;
-    /* ปรับให้เท่ากับตัวหนังสือ Link ปกติ */
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -120,7 +105,6 @@ body {
     box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
 }
 
-/* --- ส่วนปุ่มใหญ่ในฟอร์ม (Sign Up ด้านล่าง) --- */
 .btn-signup-main {
     width: 100%;
     padding: 1rem;
@@ -142,7 +126,6 @@ body {
 /* --- Main Layout --- */
 .login-container {
     min-height: calc(100vh - 80px);
-    /* หักความสูง Navbar ออก */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -210,7 +193,6 @@ label {
     transition: all 0.3s ease;
 }
 
-/* Hover & Focus สำหรับช่อง Input */
 .input-wrapper input:hover {
     background-color: #e2e8f0;
 }
@@ -338,7 +320,6 @@ label {
     transition: color 0.3s ease;
 }
 
-/* Hover Effect สำหรับลิงก์ใน Footer */
 .footer-right a:hover {
     color: #232424;
 }

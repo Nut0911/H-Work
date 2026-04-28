@@ -19,7 +19,6 @@ body {
     margin: 0;
 }
 
-/* --- 1. สไตล์ปุ่มไอคอนทั่วไป (รวมไอคอนโลก) --- */
 .icon-btn {
     background: none;
     border: none;
@@ -32,29 +31,22 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    /* สำหรับอ้างอิงเส้นของระฆัง */
 }
 
-/* Hover ไอคอนทั่วไป (รวมโลก) ให้แค่เปลี่ยนสีจางๆ หรือตามแบบเดิมของคุณ */
 .icon-btn:hover {
     color: var(--text-main);
 }
 
 
-/* --- 2. เฉพาะไอคอนระฆัง (ที่มี class active-icon) --- */
-
-/* เปลี่ยนสีระฆังเมื่อ Active หรือ Hover */
 .active-icon,
 .active-icon:hover {
     color: var(--primary-color) !important;
 }
 
-/* สร้างเส้นขีดใต้ "เฉพาะ" ระฆัง */
 .active-icon::after {
     content: '';
     position: absolute;
     bottom: -5px;
-    /* ขยับขึ้นมาให้ชิดไอคอนแล้ว (จากเดิม -15px) */
     left: 50%;
     transform: translateX(-50%) scaleX(0);
     width: 24px;
@@ -65,7 +57,6 @@ body {
     transform-origin: center;
 }
 
-/* แสดงเส้นขีดเมื่อเป็นหน้าแจ้งเตือน (Active) หรือตอน Hover ที่ระฆัง */
 .active-icon::after,
 .active-icon:hover::after {
     transform: translateX(-50%) scaleX(1);
@@ -205,7 +196,6 @@ body {
     transition: transform 0.2s;
 }
 
-/* เส้นสีฟ้าด้านซ้ายสำหรับข้อความที่ยังไม่ได้อ่าน */
 .notif-card.unread {
     border-left: 4px solid var(--primary-color);
 }

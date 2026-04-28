@@ -193,7 +193,6 @@ a {
     align-items: center;
 }
 
-/* 1. จัดการตัวปุ่ม (ปุ่มต้องใส ไม่มีขอบ) */
 .user-avatar {
     background: transparent;
     border: none;
@@ -203,7 +202,6 @@ a {
     align-items: center;
 }
 
-/* 2. จัดการรูปภาพ (ทำให้สวยตามสไตล์ที่ชอบ) */
 .user-avatar img {
     width: 40px;
     height: 40px;
@@ -212,7 +210,6 @@ a {
     transition: var(--transition-fast);
 }
 
-/* 3. ใส่ลูกเล่นเวลา Hover ที่ตัวแม่ แต่ให้ผลเกิดที่ตัวลูก */
 .user-avatar:hover img {
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 86, 210, 0.2);

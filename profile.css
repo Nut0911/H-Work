@@ -30,38 +30,26 @@
     margin-bottom: 20px;
 }
 
-/* คอนเทนเนอร์หลักของรูปโปรไฟล์ */
 .big-avatar {
     width: 120px;
-    /* ปรับขนาดความกว้างตามต้องการ */
     height: 120px;
-    /* ปรับขนาดความสูงให้เท่ากับความกว้าง */
     border-radius: 50%;
-    /* ทำเป็นวงกลม */
     overflow: hidden;
-    /* ตัดส่วนรูปที่เกินวงกลมออก */
     border: 4px solid var(--white);
-    /* เพิ่มขอบสีขาวให้ดูเด่นขึ้น */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* เพิ่มเงาให้นุ่มนวล */
     background-color: #eee;
-    /* สีพื้นหลังสำรองกรณีรูปไม่โหลด */
 }
 
-/* ตั้งค่าตัวรูปภาพข้างใน */
 .big-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* สำคัญมาก: ป้องกันไม่ให้รูปเบี้ยว */
     display: block;
 }
 
-/* จัดตำแหน่งปุ่ม Pencil (ปุ่มแก้ไข) ให้ทับอยู่บนรูป */
 .avatar-container {
     position: relative;
     display: inline-block;
-    /* ให้ขนาดพอดีกับรูปข้างใน */
     margin-bottom: 20px;
 }
 

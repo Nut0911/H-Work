@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-WORK | Frontend Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="frontendFR.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="header-left">
+                <div class="logo-container">
+                    <a href="/index.html"><img src="picture/Logo3.png" alt="Logo" class="main-logo"></a>
+                    <span class="logo-text">H-WORK</span>
+                </div>
+                <nav class="main-nav">
+                    <a href="/index.html">Home</a>
+                    <a href="/freelance.html" class="active">Freelance</a>
+                    <a href="/Company.html">Company</a>
+                </nav>
+            </div>
+            <div class="header-actions">
+                <a href="/noti.html"><button class="icon-btn"><i class="far fa-bell"></i></button></a>
+                <button class="icon-btn"><i class="fa-solid fa-globe"></i></button>
+                <a href="/post-job.html"><button class="btn btn-primary post-job-btn">Post Job</button></a>
+                <a href="/profile.html">
+                    <button class="user-avatar">
+                        <img src="picture/profile.jpeg" alt="Profile">
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-layout">
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <h3 class="sidebar-label">Discipline</h3>
+                <div class="discipline-list">
+                    <a href="/freelance.html"><button class="discipline-btn">Backend</button></a>
+                    <a href="/frontendFR.html"><button class="discipline-btn active">Frontend</button></a>
+                    <button class="discipline-btn">Fullstack</button>
+                    <button class="discipline-btn">Cyber Security</button>
+                </div>
+
+                <h3 class="sidebar-label">Core Stack</h3>
+                <div class="stack-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Tailwind</span>
+                    <span class="tag">Figma</span>
+                    <span class="tag">Vue.js</span>
+                </div>
+
+                <button class="btn-sidebar-post">Post Job</button>
+            </div>
+        </aside>
+
+        <main class="feed">
+            <div class="feed-header">
+                <h2>Frontend Architecture</h2>
+                <p>6 specialized roles found in UI development & modern web systems.</p>
+            </div>
+
+            <div class="job-grid">
+                <div class="job-card">
+                    <div class="card-header">
+                        <img src="picture/proflie2.png" class="profile-pic">
+                        <div class="header-info">
+                            <h4>Senior Frontend Developer</h4>
+                            <p>Atuamai VONGDUANGSY</p>
+                        </div>
+                        <i class="far fa-bookmark bookmark-icon"></i>
+                    </div>
+                    <p class="job-desc">Crafting pixel-perfect, accessible, and performant user interfaces.</p>
+                    <div class="job-meta">
+                        <i class="fa-solid fa-location-dot"> <span>Vientiane, Laos</span> </i>
+                        <i class="fa-solid fa-money-bill-wave"> <span>$130k - $160k</span> </i>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="badge-tech">React</span><span class="badge-tech">TypeScript</span><span
+                            class="badge-tech">Next.js</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="card-header">
+                        <img src="picture/proflie2.png" class="profile-pic">
+                        <div class="header-info">
+                            <h4>UI Engineer</h4>
+                            <p>Souksanh Panyanouvong</p>
+                        </div>
+                        <i class="far fa-bookmark bookmark-icon"></i>
+                    </div>
+                    <p class="job-desc">Specializing in Design Systems and interactive component libraries.</p>
+                    <div class="job-meta">
+                        <i class="fa-solid fa-location-dot"> <span>Vientiane, Laos</span> </i>
+                        <i class="fa-solid fa-money-bill-wave"> <span>$110k - $145k</span> </i>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="badge-tech">Figma</span><span class="badge-tech">CSS3</span><span
+                            class="badge-tech">Storybook</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="card-header">
+                        <img src="picture/proflie2.png" class="profile-pic">
+                        <div class="header-info">
+                            <h4>Next.js Specialist</h4>
+                            <p>Souksavanh Panyanouvong</p>
+                        </div>
+                        <i class="far fa-bookmark bookmark-icon"></i>
+                    </div>
+                    <p class="job-desc">Optimizing SSR/ISR workflows for high-traffic content platforms.</p>
+                    <div class="job-meta">
+                        <i class="fa-solid fa-location-dot"> <span>Remote</span> </i>
+                        <i class="fa-solid fa-money-bill-wave"> <span>$140k - $180k</span> </i>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="badge-tech">Next.js</span><span class="badge-tech">Tailwind</span><span
+                            class="badge-tech">Vercel</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="card-header">
+                        <img src="picture/proflie2.png" class="profile-pic">
+                        <div class="header-info">
+                            <h4>UX/UI Designer</h4>
+                            <p>Souksanh Pattana</p>
+                        </div>
+                        <i class="far fa-bookmark bookmark-icon"></i>
+                    </div>
+                    <p class="job-desc">Bridging the gap between creative vision and functional code.</p>
+                    <div class="job-meta">
+                        <i class="fa-solid fa-location-dot"> <span>Vientiane</span> </i>
+                        <i class="fa-solid fa-money-bill-wave"> <span>$90k - $130k</span> </i>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="badge-tech">Adobe CC</span><span class="badge-tech">Figma</span><span
+                            class="badge-tech">Prototyping</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="card-header">
+                        <img src="picture/proflie2.png" class="profile-pic">
+                        <div class="header-info">
+                            <h4>Web Performance Expert</h4>
+                            <p>Atuamai VONGDUANGSY</p>
+                        </div>
+                        <i class="far fa-bookmark bookmark-icon"></i>
+                    </div>
+                    <p class="job-desc">Focusing on Core Web Vitals and advanced state management.</p>
+                    <div class="job-meta">
+                        <i class="fa-solid fa-location-dot"> <span>Vientiane</span> </i>
+                        <i class="fa-solid fa-money-bill-wave"> <span>$150k+</span> </i>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="badge-tech">JavaScript</span><span class="badge-tech">Redux</span><span
+                            class="badge-tech">Web-Workers</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="card-header">
+                        <img src="picture/proflie2.png" class="profile-pic">
+                        <div class="header-info">
+                            <h4>Creative Technologist</h4>
+                            <p>Souksanh Panyanouvong</p>
+                        </div>
+                        <i class="far fa-bookmark bookmark-icon"></i>
+                    </div>
+                    <p class="job-desc">Building immersive 3D experiences and complex animations.</p>
+                    <div class="job-meta">
+                        <i class="fa-solid fa-location-dot"> <span>Vientiane</span> </i>
+                        <i class="fa-solid fa-money-bill-wave"> <span>$125k - $170k</span> </i>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="badge-tech">Three.js</span><span class="badge-tech">GSAP</span><span
+                            class="badge-tech">WebGL</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>H-WORK</h3>
+                <p>© 2026 H-WORK - BUILT FOR THE CURATED ARCHITECT.</p>
+            </div>
+            <nav class="footer-links">
+                <a href="#">DOCUMENTATION</a>
+                <a href="#">PRIVACY POLICY</a>
+                <a href="#">TERMS OF SERVICE</a>
+                <a href="#">ARCHITECTURE API</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+
+</html>

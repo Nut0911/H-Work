@@ -1,0 +1,239 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    padding-top: 20px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 92%;
+}
+
+/* Navbar */
+.main-header {
+    background: white;
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left,
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 22px;
+    color: #000;
+    text-decoration: none;
+}
+
+.main-logo {
+    width: 32px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.main-nav a.active {
+    color: #2563eb;
+}
+
+.btn-post {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.user-avatar-top img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Profile Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 60px;
+    margin-top: 100px;
+    align-items: start;
+}
+
+/* Sidebar Cards */
+.info-card,
+.expertise-card {
+    background-color: #ebf1f7;
+    border-radius: 12px;
+    padding: 40px 30px;
+    margin-bottom: 25px;
+}
+
+.profile-circle {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 20px;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
+.profile-name {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.profile-title {
+    font-weight: 700;
+    color: #475569;
+    margin-bottom: 12px;
+}
+
+.profile-location {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.profile-bio {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #475569;
+    font-weight: 500;
+}
+
+.label-heading {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: #b9d1e8;
+    /* สี Tag ตามรูป */
+    color: #1e3a8a;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Main Content right*/
+.work-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.banner-wrapper {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.work-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.work-content {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #334155;
+    font-weight: 500;
+}
+
+.work-content p {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.site-footer {
+    margin-top: 100px;
+    padding: 60px 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info h3 {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.footer-info p {
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 800;
+}

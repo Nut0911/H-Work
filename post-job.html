@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post a Job - H-WORK</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="post-job.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -14,17 +15,17 @@
         <div class="container header-content">
             <div class="header-left">
                 <div class="logo-container">
-                    <a href="/home.html"><img src="/picture/Logo3.png" alt="Logo" class="main-logo"></a>
+                    <a href="/index.html"><img src="/picture/Logo3.png" alt="Logo" class="main-logo"></a>
                     <span class="logo-text">H-WORK</span>
                 </div>
                 <nav class="main-nav">
-                    <a href="/home.html">Home</a>
-                    <a href="#">Freelance</a>
+                    <a href="/index.html">Home</a>
+                    <a href="/freelance.html">Freelance</a>
                     <a href="/Company.html">Company</a>
                 </nav>
             </div>
             <div class="header-actions">
-                <button class="icon-btn"><i class="far fa-bell"></i></button>
+                <a href="/noti.html"><button class="icon-btn"><i class="far fa-bell"></i></button></a>
                 <button class="icon-btn"><i class="fa-solid fa-globe"></i></button>
                 <button class="btn btn-primary post-job-btn">Post a Job</button>
                 <div class="nav-profile-pic">
@@ -111,6 +112,21 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleOptions = document.querySelectorAll('.toggle-opt');
+
+        toggleOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                toggleOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                const selectedType = option.textContent.trim();
+                console.log("Posting as:", selectedType);
+            });
+        });
+    });
+</script>
 </body>
 
 </html>

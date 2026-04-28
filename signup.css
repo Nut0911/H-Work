@@ -62,38 +62,29 @@ body {
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
-    /* สำคัญสำหรับจัดตำแหน่งเส้นใต้ */
     padding: 4px 0;
-    /* เว้นระยะให้เส้นใต้ไม่ติดตัวหนังสือเกินไป */
 }
 
-/* สร้างเส้นใต้ (ใช้ Pseudo-element เพื่อให้ทำอนิเมชั่นได้สวย) */
 .navbar nav a::after {
     content: '';
     position: absolute;
     width: 0;
-    /* เริ่มต้นให้ความกว้างเป็น 0 (มองไม่เห็น) */
     height: 2px;
-    /* ความหนาของเส้นใต้ */
     bottom: 0;
     left: 0;
     background-color: #2563eb;
-    /* สีฟ้า */
 }
 
-/* สถานะ Active (หน้าที่เราอยู๋ปัจจุบัน) ให้เส้นค้างไว้เลย */
 .navbar nav a.active {
     color: #2563eb;
     font-weight: 600;
-    /* เพิ่มความหนานิดนึงให้เด่น */
 }
 
 .navbar nav a.active::after {
     width: 100%;
-    /* เส้นใต้ปรากฏค้างไว้ */
 }
 
-/* --- Common Button Styles (รวมส่วนที่ซ้ำกัน) --- */
+/* --- Common Button Styles --- */
 .btn-login-nav,
 .btn-signup {
     background: #2563eb;
@@ -271,7 +262,6 @@ body {
     padding: 2rem 5%;
     border-top: 1px solid #e2e8f0;
     margin-top: auto;
-    /* ช่วยดัน Footer ลงข้างล่างสุด */
 }
 
 .footer-left p {
@@ -298,10 +288,8 @@ body {
 
 .footer-right a:hover {
     color: #232424;
-    /* สีฟ้าประจำแบรนด์ H-WORK */
 }
 
-/* สำคัญ: เพื่อให้ Footer ติดขอบล่างเสมอแม้เนื้อหาจะน้อย */
 body {
     display: flex;
     flex-direction: column;
