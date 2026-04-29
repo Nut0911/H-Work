@@ -194,10 +194,17 @@ body {
     gap: 20px;
     position: relative;
     transition: transform 0.2s;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.4s ease;
+    will-change: transform;
 }
 
 .notif-card.unread {
     border-left: 4px solid var(--primary-color);
+}
+
+.notif-card:active {
+    transform: scale(0.98) translateY(0);
 }
 
 .notif-icon-box {

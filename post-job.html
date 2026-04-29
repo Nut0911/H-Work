@@ -34,60 +34,64 @@
             </div>
         </div>
     </header>
-    
+
     <main class="main-content">
-        <div class="portal-header">
-            <span class="badge">HIRING PORTAL</span>
-            <h1>Create a New <br><span class="blue-text">Opportunity.</span></h1>
-        </div>
-
-        <div class="toggle-switch">
-            <button class="toggle-opt active">Developer</button>
-            <button class="toggle-opt">Hiring Company</button>
-        </div>
-
-        <div class="job-form-card">
-            <div class="input-group">
-                <label>JOB TITLE</label>
-                <input type="text" placeholder="e.g. Senior Full-Stack Architect">
+        <div class="form-portal-wrapper">
+            <div class="portal-header">
+                <span class="badge">HIRING PORTAL</span>
+                <h1>Create a New <br><span class="blue-text">Opportunity.</span></h1>
             </div>
 
-            <div class="input-row">
-                <div class="input-group">
-                    <label>JOB CATEGORY</label>
-                    <select>
-                        <option>Cybersecurity</option>
-                        <option>Fullstack</option>
-                        <option>Frontend</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label>WORK TYPE</label>
-                    <select>
-                        <option>Part Time</option>
-                        <option>Full Time</option>
-                        <option>Remote</option>
-                    </select>
-                </div>
+            <div class="toggle-switch">
+                <div class="toggle-slider"></div>
+
+                <button class="toggle-opt active">Developer</button>
+                <button class="toggle-opt">Hiring Company</button>
             </div>
 
-            <div class="input-group">
-                <label>JOB DESCRIPTION</label>
-                <div class="rich-editor">
-                    <div class="toolbar">
-                        <i class="fa-solid fa-bold"></i>
-                        <i class="fa-solid fa-italic"></i>
-                        <i class="fa-solid fa-list"></i>
-                        <i class="fa-solid fa-link"></i>
+            <div class="job-form-card">
+                <div class="input-group">
+                    <label>JOB TITLE</label>
+                    <input type="text" placeholder="e.g. Senior Full-Stack Architect">
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>JOB CATEGORY</label>
+                        <select>
+                            <option>Cybersecurity</option>
+                            <option>Fullstack</option>
+                            <option>Frontend</option>
+                            <option>Backend</option>
+                        </select>
                     </div>
-                    <textarea rows="5"
-                        placeholder="Outline the core responsibilities and vision for the role..."></textarea>
+                    <div class="input-group">
+                        <label>WORK TYPE</label>
+                        <select>
+                            <option>Part Time</option>
+                            <option>Full Time</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-actions">
-                <button class="btn-draft"><i class="fa-regular fa-bookmark"></i> Save as Draft</button>
-                <button class="btn-continue">Continue</button>
+                <div class="input-group">
+                    <label>JOB DESCRIPTION</label>
+                    <div class="rich-editor">
+                        <div class="toolbar">
+                            <i class="fa-solid fa-bold"></i>
+                            <i class="fa-solid fa-italic"></i>
+                            <i class="fa-solid fa-list"></i>
+                            <i class="fa-solid fa-link"></i>
+                        </div>
+                        <textarea rows="5"
+                            placeholder="Outline the core responsibilities and vision for the role..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn-draft"><i class="fa-regular fa-bookmark"></i> Save as Draft</button>
+                    <button class="btn-continue">Continue</button>
+                </div>
             </div>
         </div>
 
@@ -112,21 +116,25 @@
             </div>
         </div>
     </footer>
-
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const toggleOptions = document.querySelectorAll('.toggle-opt');
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleOptions = document.querySelectorAll('.toggle-opt');
+            const slider = document.querySelector('.toggle-slider');
 
-        toggleOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                toggleOptions.forEach(opt => opt.classList.remove('active'));
-                option.classList.add('active');
-                const selectedType = option.textContent.trim();
-                console.log("Posting as:", selectedType);
+            toggleOptions.forEach((option, index) => {
+                option.addEventListener('click', () => {
+                    // จัดการคลาส active
+                    toggleOptions.forEach(opt => opt.classList.remove('active'));
+                    option.classList.add('active');
+
+                    // เลื่อน Slider ด้วย % (0% สำหรับตัวแรก, 100% สำหรับตัวที่สอง)
+                    // ใช้วิธีคำนวณตำแหน่งที่แน่นอนจากขนาดจริง
+                    const offset = index * 100;
+                    slider.style.transform = `translateX(${offset}%)`;
+                });
             });
         });
-    });
-</script>
+    </script>
 </body>
 
 </html>

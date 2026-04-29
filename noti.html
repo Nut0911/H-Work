@@ -28,8 +28,9 @@
             <div class="header-actions">
                 <a href="/noti.html"><button class="icon-btn active-icon"><i class="far fa-bell"></i></button></a>
                 <button class="icon-btn"><i class="fa-solid fa-globe"></i></button>
-                <button class="btn btn-primary post-job-btn">Post Job</button>
-                <a href="/profile.html"><button class="user-avatar"><img src="picture/profile.jpeg"alt="Profile"></button></a>
+                <a href="/post-job.html"><button class="btn btn-primary post-job-btn">Post Job</button></a>
+                <a href="/profile.html"><button class="user-avatar"><img src="picture/profile.jpeg"
+                            alt="Profile"></button></a>
             </div>
         </div>
     </header>
@@ -151,6 +152,76 @@
             <a href="#">ARCHITECTURE API</a>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab');
+            const notifCards = document.querySelectorAll('.notif-card');
+            const unreadBadge = document.querySelector('.badge.blue');
+            const summaryItems = document.querySelectorAll('.summary-list li');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    const filterType = tab.textContent.toLowerCase();
+
+
+                    notifCards.forEach(card => {
+                        const category = card.querySelector('.notif-category').textContent.toLowerCase();
+
+                        if (filterType === 'all') {
+                            card.style.display = 'flex';
+                        } else if (category.includes(filterType.slice(0, -1))) { 
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            notifCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    if (this.classList.contains('unread')) {
+                        this.classList.remove('unread');
+                        this.style.transition = 'all 0.5s ease';
+
+
+                        let currentCount = parseInt(unreadBadge.textContent);
+                        if (currentCount > 0) {
+                            unreadBadge.textContent = currentCount - 1;
+
+                            if (currentCount - 1 === 0) {
+                                unreadBadge.style.display = 'none';
+                            }
+                        }
+
+                        this.style.borderLeft = '1px solid var(--border-color)';
+                    }
+                });
+            });
+
+            summaryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    summaryItems.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                });
+            });
+
+            notifCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-2px)';
+                    card.style.boxShadow = '0 10px 20px rgba(0,0,0,0.05)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = 'none';
+                });
+            });
+        });
+    </script>
 
 </body>
 
